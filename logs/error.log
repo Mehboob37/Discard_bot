@@ -1,3 +1,10 @@
 2024-11-22 07:42:43 [ERROR]: Failed to login Discord Bot: Error [TokenInvalid]: An invalid token was provided.
 2024-11-22 08:37:52 [ERROR]: Uncaught exception: DiscordAPIError[10062]: Unknown interaction
 2024-11-22 08:41:16 [ERROR]: Uncaught exception: DiscordAPIError[10062]: Unknown interaction
+2024-11-21 21:24:04 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\freshTokens.js: SyntaxError: Invalid or unexpected token
+2024-11-22 02:37:10 [ERROR]: Failed to login Discord Bot: Error [TokenInvalid]: An invalid token was provided.
+2024-11-22 02:39:58 [ERROR]: Uncaught exception: SyntaxError: Unexpected non-whitespace character after JSON at position 770
+2024-11-22 02:45:20 [ERROR]: Failed to login Discord Bot: Error [TokenInvalid]: An invalid token was provided.
+2024-11-22 02:49:23 [ERROR]: Uncaught exception: ReferenceError: prohibitedWords is not defined
+2024-11-22 02:59:24 [ERROR]: Failed to login Discord Bot: Error [TokenInvalid]: An invalid token was provided.
+2024-11-22 03:00:15 [ERROR]: Failed to login Discord Bot: Error [TokenInvalid]: An invalid token was provided.

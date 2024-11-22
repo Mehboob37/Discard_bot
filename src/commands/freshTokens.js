@@ -7,9 +7,10 @@ module.exports = {
         .setDescription('Get information about newly launched Solana tokens'),
     async execute(interaction) {
         try {
+            
             // Example API call to fetch new tokens
             // Replace with actual API endpoint and parameters
-            const response = await axios.get('https://api.solana.com/newtokens'); // Placeholder URL
+            const response = await axios.get('https://api.coingecko.com/api/v3/coins/markets'); // Placeholder URL
             const tokens = response.data.tokens;
 
             if (!tokens || tokens.length === 0) {

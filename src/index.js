@@ -1,4 +1,3 @@
-// src/index.js
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
@@ -14,6 +13,10 @@ const client = new Client({
         GatewayIntentBits.GuildMembers 
     ] 
 });
+
+// List of prohibited words and phishing domains
+const prohibitedWords = [];
+const phishingDomains = []; 
 
 // Load Commands
 client.commands = new Collection();
@@ -50,25 +53,54 @@ for (const file of eventFiles) {
     }
 }
 
+// Auto-Moderation Logic
+client.on('messageCreate', async (message) => {
+    // Ignore messages from bots
+    if (message.author.bot) return;
+
+    // Check for prohibited words
+    const foundWord = prohibitedWords.find(word => message.content.toLowerCase().includes(word.toLowerCase()));
+    if (foundWord) {
+        try {
+            await message.delete();
+            await message.channel.send(`⚠️ ${message.author}, your message contained a prohibited word and was deleted.`);
+            logger.info(`Deleted message containing prohibited word: ${foundWord}`);
+        } catch (error) {
+            logger.error(`Failed to delete message: ${error}`);
+        }
+    }
+
+    // Check for phishing links/domains
+    if (phishingDomains.some(domain => message.content.toLowerCase().includes(domain))) {
+        try {
+            await message.delete();
+            const warningMessage = `Your message contained a phishing link and was removed.`;
+            await message.channel.send({ content: warningMessage, ephemeral: true });
+
+            // Log the action
+            const modLogsChannelObj = message.guild.channels.cache.find(channel => channel.name === 'mod-logs'); // Change to your mod logs channel name
+            if (modLogsChannelObj) {
+                modLogsChannelObj.send(`Message from ${message.author.tag} was deleted for containing a phishing link.`);
+            }
+        } catch (error) {
+            logger.error(`Failed to delete phishing message: ${error}`);
+        }
+    }
+});
+
 // Handle Uncaught Exceptions and Rejections
 process.on('unhandledRejection', error => {
     logger.error(`Unhandled promise rejection: ${error}`);
-    // Optionally, notify admins or take other actions
 });
 
 process.on('uncaughtException', error => {
     logger.error(`Uncaught exception: ${error}`);
-    // Optionally, perform cleanup and exit
-});
-client.on('messageCreate', async (message) => {
-    console.log(`Message received from ${message.author.tag}: ${message.content}`);
-    // Further processing
 });
 
 // Initialize Express Server
 const expressApp = require('./server/app.js');
 
 // Login to Discord
-client.login("MTMwODYxMzUwNzgzODc3NTM0Nw.GJ7siF.Cyg6QnazCd3pNkrLJeGiuV-YEl6_MGqmTPOzM0")
+client.login('MTMwODc4Njk1MDY4MTAwNjE5MQ.GHVO6r.LwGoRQfVjUD_vK_kGnCi5zxUdcmRBnXKgFYQT4')
     .then(() => logger.info('Discord Bot is online!'))
     .catch(error => logger.error(`Failed to login Discord Bot: ${error}`));

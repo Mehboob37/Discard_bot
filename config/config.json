@@ -6,7 +6,9 @@
   "prohibitedWords": [
     "badword1",
     "badword2",
-    "badword3"
+    "badword23",
+    "kabeera",
+    "hakim"
   ],
   "phishingDomains": [
     "phishingsite.com",

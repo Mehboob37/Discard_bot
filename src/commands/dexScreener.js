@@ -11,12 +11,14 @@ module.exports = {
                 .setRequired(true)),
     async execute(interaction) {
         const token = interaction.options.getString('token').toUpperCase();
+        console.log(token)
 
         try {
             // Example API call to Dex Screener or similar service
             // Replace with actual API endpoint and parameters
             const response = await axios.get(`https://api.dexscreener.com/latest/dex/tokens/${token}`);
             const data = response.data;
+            console.log(data)
 
             if (!data || !data.priceUsd || !data.volume24h) {
                 return interaction.reply({ content: 'Price data not available for this token.', ephemeral: true });

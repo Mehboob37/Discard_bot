@@ -21,11 +21,11 @@ for (const file of commandFiles) {
 }
 
 // Construct and prepare an instance of the REST module
-const rest = new REST({ version: '10' }).setToken("MTMwODYxMzUwNzgzODc3NTM0Nw.GJ7siF.Cyg6QnazCd3pNkrLJeGiuV-YEl6_MGqmTPOzM0");
+const rest = new REST({ version: '10' }).setToken("MTMwODc4Njk1MDY4MTAwNjE5MQ.GHVO6r.LwGoRQfVjUD_vK_kGnCi5zxUdcmRBnXKgFYQT4");
 
 // Deploy commands to a specific guild for testing
-const guildId = "1308612610538733568"; // Your guild ID
-const clientId = "1308613507838775347"; // Your bot's client ID
+const guildId = "1309368692743606343"; // Your guild ID
+const clientId = "1308786950681006191"; // Your bot's client ID
 
 rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
     .then(() => console.log('Successfully registered application commands.'))
