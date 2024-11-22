@@ -1,0 +1,27 @@
+{
+  "welcomeChannel": "welcome",
+  "welcomeMessage": "Welcome {username}! Explore the #rules channel and claim your roles in #get-roles.",
+  "modLogsChannel": "mod-logs",
+  "rankUpdateChannel": "rank-updates",
+  "prohibitedWords": [
+    "badword1",
+    "badword2",
+    "badword3"
+  ],
+  "phishingDomains": [
+    "phishingsite.com",
+    "malicious.com"
+  ],
+  "verificationChannel": "1309349932247023717",
+  "rulesChannel": "rules",
+  "moderatorRole": "Moderator",
+  "verifiedRole": "1308612610538733568",
+  "unverifiedRole": "Unverified",
+  "rankRoles": {
+    "Newbie": "Newbie",
+    "Explorer": "Explorer",
+    "Whale": "Whale"
+  },
+  "solanaNewsChannel": "solana-news",
+  "whaleAlertChannel": "whale-alerts"
+}
