@@ -1,0 +1,16 @@
+2024-11-22 08:37:52 [ERROR]: uncaughtException: Unknown interaction
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/mehboob/Upwork Projects/Bots/node_modules/@discordjs/rest/dist/index.js:727:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/mehboob/Upwork Projects/Bots/node_modules/@discordjs/rest/dist/index.js:831:23)
+    at async _REST.request (/home/mehboob/Upwork Projects/Bots/node_modules/@discordjs/rest/dist/index.js:1272:22)
+    at async ChatInputCommandInteraction.reply (/home/mehboob/Upwork Projects/Bots/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:115:5)
+    at async Object.execute (/home/mehboob/Upwork Projects/Bots/src/events/interactionCreate.js:25:13)
+2024-11-22 08:41:16 [ERROR]: uncaughtException: Unknown interaction
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/mehboob/Upwork Projects/Bots/node_modules/@discordjs/rest/dist/index.js:727:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/mehboob/Upwork Projects/Bots/node_modules/@discordjs/rest/dist/index.js:831:23)
+    at async _REST.request (/home/mehboob/Upwork Projects/Bots/node_modules/@discordjs/rest/dist/index.js:1272:22)
+    at async ChatInputCommandInteraction.reply (/home/mehboob/Upwork Projects/Bots/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:115:5)
+    at async Object.execute (/home/mehboob/Upwork Projects/Bots/src/events/interactionCreate.js:25:13)

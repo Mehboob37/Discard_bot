@@ -40,7 +40,7 @@ module.exports = {
         const subcommand = interaction.options.getSubcommand();
         const userId = interaction.user.id;
         const address = interaction.options.getString('address')?.toLowerCase();
-
+        console.log('address',address)
         let watchlists = JSON.parse(fs.readFileSync(watchlistPath));
 
         if (!watchlists[userId]) {

@@ -23,5 +23,6 @@
     "Whale": "Whale"
   },
   "solanaNewsChannel": "solana-news",
-  "whaleAlertChannel": "whale-alerts"
+  "whaleAlertChannel": "whale-alerts",
+  "serverRules": "new users"
 }
