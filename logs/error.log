@@ -14,3 +14,33 @@
 2024-11-22 06:03:50 [ERROR]: Uncaught exception: ReferenceError: MTMwODc4Njk1MDY4MTAwNjE5MQ is not defined
 2024-11-22 06:31:33 [ERROR]: Failed to login Discord Bot: Error [TokenInvalid]: An invalid token was provided.
 2024-11-22 21:49:01 [ERROR]: Unhandled promise rejection: DiscordAPIError[50001]: Missing Access
+2024-11-22 23:31:00 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js: SyntaxError: Unexpected identifier 'executeChartCommand'
+2024-11-22 23:31:40 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js: SyntaxError: Unexpected identifier 'executeChartCommand'
+2024-11-23 01:33:57 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js: Error: Cannot find module 'corn'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+2024-11-23 01:42:15 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js: Error: Cannot find module 'cron'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+2024-11-23 01:42:21 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js: Error: Cannot find module 'cron'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+2024-11-23 01:43:09 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js: Error: Cannot find module 'cron'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+2024-11-23 01:43:21 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js: Error: Cannot find module 'cron'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+2024-11-23 01:44:27 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js: Error: Cannot find module 'cron'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+2024-11-23 01:45:36 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js: Error: Cannot find module 'cron'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
