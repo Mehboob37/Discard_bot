@@ -44,3 +44,5 @@ Require stack:
 Require stack:
 - C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\analytics.js
 - C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+2024-11-23 02:42:20 [ERROR]: Unhandled promise rejection: Error [TokenInvalid]: An invalid token was provided.
+2024-11-23 02:44:44 [ERROR]: Unhandled promise rejection: ReferenceError: CronJob is not defined

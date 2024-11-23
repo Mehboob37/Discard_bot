@@ -22,14 +22,24 @@ module.exports = {
     async execute(interaction) {
         const ticker = interaction.options.getString('ticker').toUpperCase();
         const timeframe = interaction.options.getString('timeframe');
-        const alertPrice = interaction.options.getInteger('alert');
+        // const alertPrice = interaction.options.getInteger('alert');
+        const alertPrice = 257.49
+        // Map ticker to CoinGecko ID
+        const tokenId = mapTickerToCoinGeckoId(ticker);
+
+        if (!tokenId) {
+            return interaction.reply({
+                content: `The ticker ${ticker} is not supported.`,
+                ephemeral: true
+            });
+        }
 
         try {
             // Acknowledge the command immediately
             await interaction.deferReply();
 
             // Construct the API URL for fetching price data
-            const apiUrl = `https://api.coingecko.com/api/v3/coins/${ticker.toLowerCase()}/market_chart?vs_currency=usd&days=1`;
+            const apiUrl = `https://api.coingecko.com/api/v3/coins/${tokenId}/market_chart?vs_currency=usd&days=1`;
             console.log(`Requesting data from: ${apiUrl}`);
 
             // Fetch data using node-fetch
@@ -87,7 +97,7 @@ module.exports = {
 
             // Start price alert if requested
             if (alertPrice) {
-                startPriceAlert(ticker, alertPrice, interaction);
+                startPriceAlert(tokenId, alertPrice, interaction);
             }
         } catch (error) {
             console.error('Error fetching data or calculating indicators:', error.message);
@@ -96,18 +106,31 @@ module.exports = {
     },
 };
 
+// Map supported tickers to CoinGecko IDs
+function mapTickerToCoinGeckoId(ticker) {
+    const mapping = {
+        SOLUSD: 'solana',
+        BTCUSD: 'bitcoin',
+        ETHUSD: 'ethereum',
+        // Add more mappings as needed
+    };
+
+    return mapping[ticker];
+}
+
 // Function to monitor and trigger price alerts
-function startPriceAlert(ticker, alertPrice, interaction) {
-    const job = new CronJob('*/1 * * * *', async () => {
+function startPriceAlert(tokenId, alertPrice, interaction) {
+    const job = new CronJob('* * * * *', async () => {
+        console.log('going')
         try {
-            const priceApiUrl = `https://api.coingecko.com/api/v3/simple/price?ids=${ticker.toLowerCase()}&vs_currencies=usd`;
+            const priceApiUrl = `https://api.coingecko.com/api/v3/simple/price?ids=${tokenId}&vs_currencies=usd`;
             const priceResponse = await fetch(priceApiUrl);
             if (!priceResponse.ok) {
                 throw new Error(`Failed to fetch price data with status: ${priceResponse.status}`);
             }
 
             const priceData = await priceResponse.json();
-            const tokenPrice = priceData[ticker.toLowerCase()]?.usd;
+            const tokenPrice = priceData[tokenId]?.usd;
 
             if (!tokenPrice) {
                 console.error('Price data not available');
@@ -115,7 +138,7 @@ function startPriceAlert(ticker, alertPrice, interaction) {
             }
 
             if (tokenPrice >= alertPrice) {
-                await interaction.followUp({ content: `Alert: ${ticker} price has crossed your threshold! Current price: $${tokenPrice}` });
+                await interaction.followUp({ content: `Alert: ${tokenId.toUpperCase()} price has crossed your threshold! Current price: $${tokenPrice}` });
                 job.stop();
             }
         } catch (error) {
