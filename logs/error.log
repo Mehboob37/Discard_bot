@@ -1,3 +1,7 @@
 2024-11-22 07:42:43 [ERROR]: Failed to login Discord Bot: Error [TokenInvalid]: An invalid token was provided.
 2024-11-22 08:37:52 [ERROR]: Uncaught exception: DiscordAPIError[10062]: Unknown interaction
 2024-11-22 08:41:16 [ERROR]: Uncaught exception: DiscordAPIError[10062]: Unknown interaction
+2024-11-22 11:14:13 [ERROR]: [ERROR] Failed to load command at /home/mehboob/Upwork Projects/Bots/src/commands/price.js: Error: Invalid string format
+2024-11-22 11:16:45 [ERROR]: Uncaught exception: DiscordAPIError[10062]: Unknown interaction
+2024-11-22 11:39:54 [ERROR]: Uncaught exception: ReferenceError: cron is not defined
+2024-11-22 12:11:01 [ERROR]: Failed to login Discord Bot: Error: getaddrinfo EAI_AGAIN discord.com

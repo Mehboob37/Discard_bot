@@ -4,7 +4,8 @@ const path = require('node:path');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 require('dotenv').config();
 const logger = require('./utils/logger'); // Assuming you have a logger utility
-
+const cron = require('node-cron');
+const axios = require('axios');
 // Initialize Discord Client
 const client = new Client({ 
     intents: [ 
@@ -15,6 +16,8 @@ const client = new Client({
     ] 
 });
 
+const prohibitedWords = ['hi'];
+const phishingDomains = []; 
 // Load Commands
 client.commands = new Collection();
 const commandsPath = path.join(__dirname, 'commands');
@@ -67,6 +70,50 @@ client.on('messageCreate', async (message) => {
 
 // Initialize Express Server
 const expressApp = require('./server/app.js');
+
+cron.schedule('* * * * *', async () => {
+    const alertsPath = path.join(__dirname, '../data/alerts.json');
+    let alerts = JSON.parse(fs.readFileSync(alertsPath));
+    console.log('ok')
+
+    for (const userId in alerts) {
+        for (const alert of alerts[userId]) {
+            try {
+                // Fetch current data
+                const response = await axios.get(`https://api.coingecko.com/api/v3/coins/${alert.token}`);
+                const data = response.data;
+
+                if (!data || !data.market_data) continue;
+
+                let currentValue;
+                if (alert.type === 'price') {
+                    currentValue = data.market_data.current_price.usd;
+                } else if (alert.type === 'volume') {
+                    currentValue = data.market_data.total_volume.usd;
+                }
+
+                if (!currentValue) continue;
+
+                // Check if threshold is crossed
+                if (currentValue >= alert.threshold) {
+                    const user = await client.users.fetch(userId);
+                    await user.send(`🔔 **Alert Triggered!**\n**${alert.token.toUpperCase()}** ${alert.type} has crossed **${alert.threshold}**.\nCurrent ${alert.type}: ${currentValue}`);
+
+                    // Optionally, remove the alert after triggering
+                    alerts[userId] = alerts[userId].filter(a => !(a.token === alert.token && a.type === alert.type && a.threshold === alert.threshold));
+                    if (alerts[userId].length === 0) {
+                        delete alerts[userId];
+                    }
+                }
+            } catch (error) {
+                console.error('Error checking alerts:', error);
+            }
+        }
+    }
+
+    fs.writeFileSync(alertsPath, JSON.stringify(alerts, null, 2));
+});
+
 
 // Login to Discord
 client.login("MTMwODYxMzUwNzgzODc3NTM0Nw.GJ7siF.Cyg6QnazCd3pNkrLJeGiuV-YEl6_MGqmTPOzM0")

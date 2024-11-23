@@ -14,3 +14,36 @@ DiscordAPIError[10062]: Unknown interaction
     at async _REST.request (/home/mehboob/Upwork Projects/Bots/node_modules/@discordjs/rest/dist/index.js:1272:22)
     at async ChatInputCommandInteraction.reply (/home/mehboob/Upwork Projects/Bots/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:115:5)
     at async Object.execute (/home/mehboob/Upwork Projects/Bots/src/events/interactionCreate.js:25:13)
+2024-11-22 11:16:45 [ERROR]: uncaughtException: Unknown interaction
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/mehboob/Upwork Projects/Bots/node_modules/@discordjs/rest/dist/index.js:727:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/mehboob/Upwork Projects/Bots/node_modules/@discordjs/rest/dist/index.js:831:23)
+    at async _REST.request (/home/mehboob/Upwork Projects/Bots/node_modules/@discordjs/rest/dist/index.js:1272:22)
+    at async ChatInputCommandInteraction.reply (/home/mehboob/Upwork Projects/Bots/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:115:5)
+    at async Object.execute (/home/mehboob/Upwork Projects/Bots/src/events/interactionCreate.js:25:13)
+2024-11-22 11:39:54 [ERROR]: uncaughtException: cron is not defined
+ReferenceError: cron is not defined
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:71:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-22 11:40:39 [ERROR]: uncaughtException: Cannot find module 'node-cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+Error: Cannot find module 'node-cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:7:14)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)

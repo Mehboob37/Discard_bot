@@ -1,0 +1,28 @@
+{
+  "user_id_1": [
+    {
+      "token": "solana",
+      "type": "price",
+      "threshold": 100
+    },
+    {
+      "token": "solana",
+      "type": "volume",
+      "threshold": 1000000
+    }
+  ],
+  "user_id_2": [
+    {
+      "token": "solana",
+      "type": "price",
+      "threshold": 200
+    }
+  ],
+  "826661564542091296": [
+    {
+      "token": "solana",
+      "type": "price",
+      "threshold": 258.53
+    }
+  ]
+}

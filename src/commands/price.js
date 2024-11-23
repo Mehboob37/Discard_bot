@@ -1,13 +1,14 @@
+// src/commands/price.js
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const axios = require('axios');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('price')
+        .setName('pricecheck')
         .setDescription('Fetch Solana (SOL) price and 24-hour volume information'),
     async execute(interaction) {
         const token = "solana"; // CoinGecko uses "solana" as the ID for SOL token
-        
+
         try {
             // Fetch data from CoinGecko API
             const response = await axios.get(`https://api.coingecko.com/api/v3/coins/${token}`);
