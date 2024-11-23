@@ -59,3 +59,39 @@ ReferenceError: MTMwODc4Njk1MDY4MTAwNjE5MQ is not defined
     at Module._load (node:internal/modules/cjs/loader:1104:12)
     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
     at node:internal/main/run_main_module:28:49
+2024-11-22 21:44:24 [ERROR]: uncaughtException: cron is not defined
+ReferenceError: cron is not defined
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:86:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-22 21:44:49 [ERROR]: uncaughtException: cron is not defined
+ReferenceError: cron is not defined
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:87:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-22 21:47:42 [ERROR]: uncaughtException: cron is not defined
+ReferenceError: cron is not defined
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:87:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-22 21:47:56 [ERROR]: uncaughtException: cron is not defined
+ReferenceError: cron is not defined
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:87:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49

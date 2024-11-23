@@ -2,8 +2,10 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 require('dotenv').config();
+const Parser = require('rss-parser');
+const cron = require('node-cron');
 const logger = require('./utils/logger'); // Assuming you have a logger utility
-
+const parser = new Parser();
 // Initialize Discord Client
 const client = new Client({ 
     intents: [ 
@@ -52,6 +54,45 @@ for (const file of eventFiles) {
         client.on(event.name, (...args) => event.execute(...args, client));
     }
 }
+// Fetch news function
+const CHANNEL_ID = '1309373303110107190';
+async function fetchSolanaNews() {
+    try {
+        const feed = await parser.parseURL('https://decrypt.co/feed'); // Decrypt RSS feed
+        const solanaNews = feed.items.filter(item => item.title.toLowerCase().includes('solana'));
+
+        if (solanaNews.length === 0) {
+            return 'No recent Solana news found.';
+        }
+
+        const newsMessages = solanaNews.slice(0, 5).map(item => `**${item.title}**\n${item.link}`).join('\n\n');
+        return newsMessages;
+    } catch (error) {
+        console.error(error);
+        return 'Failed to fetch news.';
+    }
+}
+
+// Send news to a specific channel function
+async function sendNewsToChannel() {
+    const channel = await client.channels.fetch(CHANNEL_ID);
+    if (!channel) {
+        console.log('Channel not found!');
+        return;
+    }
+
+    const newsMessages = await fetchSolanaNews();
+    channel.send(newsMessages);
+}
+
+// Schedule the task with cron (every 1 hour in this case)
+cron.schedule('* * * * *', () => { // Cron job runs every hour
+    sendNewsToChannel();
+});
+
+client.once('ready', () => {
+    console.log('Bot is ready and cron job is running!');
+});
 
 
 // Auto-Moderation Logic

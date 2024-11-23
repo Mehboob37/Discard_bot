@@ -3436,3 +3436,36 @@
 2024-11-22 21:29:42 [INFO]: Loaded command: whalealert
 2024-11-22 21:29:42 [INFO]: Express server is running on port 3000
 2024-11-22 21:29:44 [INFO]: Discord Bot is online!
+2024-11-22 21:44:24 [INFO]: Loaded command: chart
+2024-11-22 21:44:49 [INFO]: Loaded command: chart
+2024-11-22 21:47:42 [INFO]: Loaded command: chart
+2024-11-22 21:47:56 [INFO]: Loaded command: chart
+2024-11-22 21:48:47 [INFO]: Loaded command: chart
+2024-11-22 21:48:47 [INFO]: Loaded command: captcha
+2024-11-22 21:48:47 [INFO]: Loaded command: community
+2024-11-22 21:48:47 [INFO]: Loaded command: price
+2024-11-22 21:48:47 [INFO]: Loaded command: newtoken
+2024-11-22 21:48:47 [INFO]: Loaded command: sentiment
+2024-11-22 21:48:47 [INFO]: Loaded command: meme
+2024-11-22 21:48:47 [INFO]: Loaded command: moderation
+2024-11-22 21:48:47 [INFO]: Loaded command: news
+2024-11-22 21:48:47 [INFO]: Loaded command: ranking
+2024-11-22 21:48:47 [INFO]: Loaded command: wallet
+2024-11-22 21:48:47 [INFO]: Loaded command: whalealert
+2024-11-22 21:48:47 [INFO]: Express server is running on port 3000
+2024-11-22 21:48:49 [INFO]: Discord Bot is online!
+2024-11-22 21:49:01 [ERROR]: Unhandled promise rejection: DiscordAPIError[50001]: Missing Access
+2024-11-22 21:49:47 [INFO]: Loaded command: chart
+2024-11-22 21:49:47 [INFO]: Loaded command: captcha
+2024-11-22 21:49:47 [INFO]: Loaded command: community
+2024-11-22 21:49:47 [INFO]: Loaded command: price
+2024-11-22 21:49:47 [INFO]: Loaded command: newtoken
+2024-11-22 21:49:47 [INFO]: Loaded command: sentiment
+2024-11-22 21:49:47 [INFO]: Loaded command: meme
+2024-11-22 21:49:47 [INFO]: Loaded command: moderation
+2024-11-22 21:49:47 [INFO]: Loaded command: news
+2024-11-22 21:49:47 [INFO]: Loaded command: ranking
+2024-11-22 21:49:47 [INFO]: Loaded command: wallet
+2024-11-22 21:49:47 [INFO]: Loaded command: whalealert
+2024-11-22 21:49:47 [INFO]: Express server is running on port 3000
+2024-11-22 21:49:49 [INFO]: Discord Bot is online!
