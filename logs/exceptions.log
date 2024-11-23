@@ -38,3 +38,24 @@ ReferenceError: prohibitedWords is not defined
     at WebSocketShard.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\ws\dist\index.js:1190:51)
     at WebSocketShard.emit (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@vladfrangu\async_event_emitter\dist\index.cjs:287:31)
     at WebSocketShard.onMessage (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\ws\dist\index.js:1005:14)
+2024-11-22 03:36:06 [ERROR]: uncaughtException: Unexpected non-whitespace character after JSON at position 801
+SyntaxError: Unexpected non-whitespace character after JSON at position 801
+    at JSON.parse (<anonymous>)
+    at Object.execute (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\events\messageCreate.js:14:29)
+    at Client.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:52:50)
+    at Client.emit (node:events:531:35)
+    at MessageCreateAction.handle (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\discord.js\src\client\actions\MessageCreate.js:32:14)
+    at module.exports [as MESSAGE_CREATE] (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\discord.js\src\client\websocket\handlers\MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\discord.js\src\client\websocket\WebSocketManager.js:348:31)
+    at WebSocketManager.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\discord.js\src\client\websocket\WebSocketManager.js:232:12)
+    at WebSocketManager.emit (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@vladfrangu\async_event_emitter\dist\index.cjs:287:31)
+    at WebSocketShard.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\ws\dist\index.js:1190:51)
+2024-11-22 06:03:50 [ERROR]: uncaughtException: MTMwODc4Njk1MDY4MTAwNjE5MQ is not defined
+ReferenceError: MTMwODc4Njk1MDY4MTAwNjE5MQ is not defined
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:131:14)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49

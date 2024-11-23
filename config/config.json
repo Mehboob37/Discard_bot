@@ -1,6 +1,6 @@
 {
   "welcomeChannel": "welcome",
-  "welcomeMessage": "Welcome {username}! Explore the #rules channel and claim your roles in #get-roles.",
+  "welcomeMessage": "/meme",
   "modLogsChannel": "mod-logs",
   "rankUpdateChannel": "rank-updates",
   "prohibitedWords": [

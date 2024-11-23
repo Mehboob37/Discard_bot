@@ -10,6 +10,7 @@ module.exports = {
 
         // Check for prohibited words
         if (prohibitedWords.some(word => message.content.toLowerCase().includes(word))) {
+           
             await message.delete();
             const warningMessage = `Your message contained prohibited language and was removed.`;
             await message.channel.send({ content: warningMessage, ephemeral: true });

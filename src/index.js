@@ -15,7 +15,7 @@ const client = new Client({
 });
 
 // List of prohibited words and phishing domains
-const prohibitedWords = [];
+const prohibitedWords = ["hakim","kabeera"];
 const phishingDomains = []; 
 
 // Load Commands
@@ -52,6 +52,7 @@ for (const file of eventFiles) {
         client.on(event.name, (...args) => event.execute(...args, client));
     }
 }
+
 
 // Auto-Moderation Logic
 client.on('messageCreate', async (message) => {
@@ -103,4 +104,3 @@ const expressApp = require('./server/app.js');
 // Login to Discord
 client.login('MTMwODc4Njk1MDY4MTAwNjE5MQ.GHVO6r.LwGoRQfVjUD_vK_kGnCi5zxUdcmRBnXKgFYQT4')
     .then(() => logger.info('Discord Bot is online!'))
-    .catch(error => logger.error(`Failed to login Discord Bot: ${error}`));
