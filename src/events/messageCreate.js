@@ -9,7 +9,7 @@ module.exports = {
     name: Events.MessageCreate,
     async execute(message, client) {
         if (message.author.bot) return;
-
+        
         const configPath = path.join(__dirname, '../../config/config.json');
         const config = JSON.parse(fs.readFileSync(configPath));
 
@@ -31,7 +31,7 @@ module.exports = {
         const prohibitedWords = config.prohibitedWords || [];
         const phishingDomains = config.phishingDomains || [];
 
-        let hasProhibitedContent = false;
+        let hasProhibitedContent = true;
         let reason = '';
 
         // Check for prohibited words
@@ -39,10 +39,11 @@ module.exports = {
             hasProhibitedContent = true;
             reason = 'Inappropriate language';
         }
-
+       
         // Check for phishing links
         const urlRegex = /(https?:\/\/[^\s]+)/g;
         const urls = message.content.match(urlRegex);
+        console.log('matched',urls)
         if (urls) {
             for (const url of urls) {
                 try {
@@ -50,6 +51,8 @@ module.exports = {
                     if (phishingDomains.includes(domain)) {
                         hasProhibitedContent = true;
                         reason = 'Phishing link detected';
+                        console.log('ok')
+                        console.log(hasProhibitedContent)
                         break;
                     }
                 } catch (error) {
@@ -57,9 +60,10 @@ module.exports = {
                 }
             }
         }
-
         if (hasProhibitedContent) {
+            console.log('deleted')
             await message.delete();
+            
 
             // Warn the user
             const warning = await message.channel.send(`${message.author}, your message was removed due to ${reason}. Please adhere to the server rules.`);

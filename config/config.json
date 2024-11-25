@@ -24,5 +24,9 @@
   },
   "solanaNewsChannel": "solana-news",
   "whaleAlertChannel": "whale-alerts",
-  "serverRules": "new users"
+  "serverRules": "new users",
+  "whaleAlert": {
+    "threshold": 10,
+    "channelId": "1308986018807943178"
+  }
 }

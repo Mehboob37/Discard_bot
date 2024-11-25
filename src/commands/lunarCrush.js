@@ -4,30 +4,42 @@ const axios = require('axios');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('sentiment')
-        .setDescription('Get social sentiment for Solana tokens')
+        .setDescription('Get market and social data for a cryptocurrency')
         .addStringOption(option =>
             option.setName('token')
                 .setDescription('Token ticker symbol, e.g., SOL')
                 .setRequired(true)),
     async execute(interaction) {
-        const token = interaction.options.getString('token').toUpperCase();
+        const token = interaction.options.getString('token').toLowerCase(); // CoinGecko uses lowercase
 
         try {
-            // Example API call to Lunar Crush
-            const response = await axios.get(`https://api.lunarcrush.com/v2?data=assets&key=${process.env.LUNARCRUSH_API_KEY}&symbol=${token}`);
-            const data = response.data.data[0];
+            // Fetch coin data from CoinGecko
+            const response = await axios.get(`https://api.coingecko.com/api/v3/coins/${token}`);
+
+            const data = response.data;
 
             if (!data) {
-                return interaction.reply({ content: 'Sentiment data not available for this token.', ephemeral: true });
+                return interaction.reply({ content: 'Data not available for this token.', ephemeral: true });
             }
 
-            const sentiment = data.sentiment?.sentiment || 'Neutral';
-            const volume = data.volume?.volume || 'N/A';
+            // Extract relevant data
+            const marketData = data.market_data || {};
+            const communityData = data.community_data || {};
 
-            await interaction.reply(`**${token} Sentiment:** ${sentiment}\n**Social Volume:** ${volume}`);
+            const sentimentVotesUp = communityData.sentiment_votes_up_percentage || 'N/A';
+            const sentimentVotesDown = communityData.sentiment_votes_down_percentage || 'N/A';
+            const socialVolume = communityData.twitter_followers || 'N/A';
+
+            // Reply with the data
+            await interaction.reply(
+                `**${data.name} (${data.symbol.toUpperCase()})**\n` +
+                `- Sentiment Upvotes: ${sentimentVotesUp}%\n` +
+                `- Sentiment Downvotes: ${sentimentVotesDown}%\n` +
+                `- Twitter Followers: ${socialVolume}`
+            );
         } catch (error) {
             console.error(error);
-            await interaction.reply({ content: 'Failed to fetch sentiment data.', ephemeral: true });
+            await interaction.reply({ content: 'Failed to fetch data. Please check the token symbol or try again later.', ephemeral: true });
         }
     },
 };

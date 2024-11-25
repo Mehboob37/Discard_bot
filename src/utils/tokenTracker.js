@@ -13,6 +13,7 @@ if (!fs.existsSync(tokensFilePath)) {
 async function fetchAllTokens() {
     try {
         const response = await axios.get('https://api.coingecko.com/api/v3/coins/list?include_platform=true');
+        console.log(response.data.slice(0,10))
         return response.data;
     } catch (error) {
         console.error('Error fetching tokens from CoinGecko:', error);
@@ -41,5 +42,4 @@ async function getNewTokens() {
 
     return newTokens;
 }
-
 module.exports = { getNewTokens };
