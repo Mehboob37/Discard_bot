@@ -46,3 +46,62 @@ Require stack:
 - C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
 2024-11-23 02:42:20 [ERROR]: Unhandled promise rejection: Error [TokenInvalid]: An invalid token was provided.
 2024-11-23 02:44:44 [ERROR]: Unhandled promise rejection: ReferenceError: CronJob is not defined
+2024-11-24 21:49:59 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 21:50:00 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 21:50:00 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 21:50:00 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 21:54:55 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 21:54:55 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 21:54:55 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 21:54:55 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 21:54:56 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 21:54:56 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:08:53 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:08:53 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:08:53 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:08:53 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:08:53 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:08:53 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:09:20 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:09:20 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:09:20 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:09:20 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:09:20 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:10:39 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:10:40 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:10:40 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:10:40 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:10:40 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:10:40 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:10:40 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:23:51 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:23:51 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:23:51 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:23:51 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:23:51 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:23:51 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:23:51 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:31:39 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:31:39 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:31:39 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:31:39 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:31:39 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:31:39 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:32:51 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:32:51 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:32:51 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:32:51 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:32:52 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:50:58 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:50:58 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:50:59 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:50:59 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:50:59 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:50:59 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 22:59:14 [ERROR]: Unhandled promise rejection: Error: getaddrinfo ENOTFOUND discord.com
+2024-11-24 23:01:41 [ERROR]: Unhandled promise rejection: Error: getaddrinfo ENOTFOUND gateway.discord.gg
+2024-11-24 23:03:13 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 23:03:13 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 23:03:13 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 23:03:13 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-24 23:03:13 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.

@@ -113,7 +113,7 @@ const targetChannelId = '1309475707910488145'; // Replace with your Discord chan
 
 // Function to start auto price monitoring
 function startAutoPriceMonitoring() {
-    const job = new CronJob('* * * * *', async () => {
+    const job = new CronJob('1 * * * *', async () => {
         console.log('Checking token prices...');
         for (const [ticker, tokenId] of Object.entries(tokenMapping)) {
             try {
