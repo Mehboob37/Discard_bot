@@ -95,3 +95,283 @@ ReferenceError: cron is not defined
     at Module._load (node:internal/modules/cjs/loader:1104:12)
     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
     at node:internal/main/run_main_module:28:49
+2024-11-25 22:10:32 [ERROR]: uncaughtException: Cannot find module './config/config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+Error: Cannot find module './config/config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:8:16)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-11-25 22:14:02 [ERROR]: uncaughtException: Cannot find module './config/config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+Error: Cannot find module './config/config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:8:16)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-11-25 22:14:09 [ERROR]: uncaughtException: Cannot find module './config/config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+Error: Cannot find module './config/config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:8:16)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-11-25 22:16:37 [ERROR]: uncaughtException: Cannot find module './config/config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+Error: Cannot find module './config/config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:8:16)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-11-25 22:16:51 [ERROR]: uncaughtException: Cannot find module './config/config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+Error: Cannot find module './config/config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:8:16)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-11-25 22:20:15 [ERROR]: uncaughtException: Cannot find module './config/config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+Error: Cannot find module './config/config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:8:16)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-11-25 22:21:10 [ERROR]: uncaughtException: Cannot find module './config/config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+Error: Cannot find module './config/config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:8:16)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-11-26 00:59:18 [ERROR]: uncaughtException: Unknown interaction
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:727:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:831:23)
+    at async _REST.request (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:1272:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:115:5)
+    at async Object.execute (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\events\interactionCreate.js:25:13)
+2024-11-26 01:26:50 [ERROR]: uncaughtException: Cannot find module '../../utils/captcha'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\events\guildMemberAdd.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+Error: Cannot find module '../../utils/captcha'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\events\guildMemberAdd.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\events\guildMemberAdd.js:3:27)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+2024-11-26 01:29:28 [ERROR]: uncaughtException: Cannot find module '../../utils/captcha'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\events\guildMemberAdd.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+Error: Cannot find module '../../utils/captcha'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\events\guildMemberAdd.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\events\guildMemberAdd.js:3:27)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+2024-11-26 02:34:50 [ERROR]: uncaughtException: Unknown interaction
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:727:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:831:23)
+    at async _REST.request (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:1272:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:115:5)
+    at async Object.execute (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\events\interactionCreate.js:25:13)
+2024-11-26 03:37:18 [ERROR]: uncaughtException: Events is not defined
+ReferenceError: Events is not defined
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:164:11)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-26 19:40:01 [ERROR]: uncaughtException: Events is not defined
+ReferenceError: Events is not defined
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:164:11)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-26 19:43:08 [ERROR]: uncaughtException: Events is not defined
+ReferenceError: Events is not defined
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:164:11)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-26 19:44:14 [ERROR]: uncaughtException: Events is not defined
+ReferenceError: Events is not defined
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:164:11)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-26 19:44:59 [ERROR]: uncaughtException: Events is not defined
+ReferenceError: Events is not defined
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:164:11)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-26 19:45:01 [ERROR]: uncaughtException: Events is not defined
+ReferenceError: Events is not defined
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:164:11)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-26 19:50:58 [ERROR]: uncaughtException: Events is not defined
+ReferenceError: Events is not defined
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:164:11)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-26 19:51:17 [ERROR]: uncaughtException: Events is not defined
+ReferenceError: Events is not defined
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:164:11)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-26 19:51:28 [ERROR]: uncaughtException: Events is not defined
+ReferenceError: Events is not defined
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:164:11)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-26 19:51:52 [ERROR]: uncaughtException: Events is not defined
+ReferenceError: Events is not defined
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js:164:11)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-26 21:01:08 [ERROR]: uncaughtException: Interaction has already been acknowledged.
+DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:727:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:831:23)
+    at async _REST.request (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:1272:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:115:5)
+    at async Object.execute (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\events\interactionCreate.js:25:13)
+2024-11-27 01:28:11 [ERROR]: uncaughtException: Missing Permissions
+DiscordAPIError[50013]: Missing Permissions
+    at handleErrors (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:727:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SequentialHandler.runRequest (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:1128:23)
+    at async SequentialHandler.queueRequest (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:959:14)
+    at async _REST.request (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:1272:22)
+    at async GuildMemberManager.edit (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\discord.js\src\managers\GuildMemberManager.js:382:15)
+    at async Object.execute (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\events\messageCreate.js:87:17)
+2024-11-27 01:42:44 [ERROR]: uncaughtException: Missing Permissions
+DiscordAPIError[50013]: Missing Permissions
+    at handleErrors (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:727:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SequentialHandler.runRequest (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:1128:23)
+    at async SequentialHandler.queueRequest (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:959:14)
+    at async _REST.request (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\@discordjs\rest\dist\index.js:1272:22)
+    at async GuildMemberManager.edit (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\node_modules\discord.js\src\managers\GuildMemberManager.js:382:15)
+    at async Object.execute (C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\events\messageCreate.js:87:17)

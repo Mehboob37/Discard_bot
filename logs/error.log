@@ -105,3 +105,64 @@ Require stack:
 2024-11-24 23:03:13 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
 2024-11-24 23:03:13 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
 2024-11-24 23:03:13 [ERROR]: Unhandled promise rejection: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+2024-11-25 01:58:16 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\twitter.js: Error: Invalid consumer tokens
+2024-11-25 02:00:23 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\twitter.js: Error: Invalid consumer tokens
+2024-11-25 02:35:00 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\twitter.js: Error: Invalid consumer tokens
+2024-11-25 02:49:28 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\twitter.js: Error: Invalid consumer tokens
+2024-11-25 19:59:12 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\twitter.js: Error: Invalid consumer tokens
+2024-11-25 21:50:26 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js: Error: Cannot find module 'discord-captcha'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+2024-11-25 21:59:30 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js: Error: Cannot find module 'discord-captcha'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+2024-11-25 22:00:02 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js: Error: Cannot find module 'discord-captcha'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+2024-11-25 22:00:24 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js: ReferenceError: client is not defined
+2024-11-25 22:01:31 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js: ReferenceError: client is not defined
+2024-11-25 22:04:09 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js: ReferenceError: client is not defined
+2024-11-25 22:06:07 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js: ReferenceError: client is not defined
+2024-11-25 22:07:10 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js: ReferenceError: client is not defined
+2024-11-25 22:09:31 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js: ReferenceError: client is not defined
+2024-11-26 00:59:18 [ERROR]: Uncaught exception: DiscordAPIError[10062]: Unknown interaction
+2024-11-26 01:23:01 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js: Error: Cannot find module '../../utils/captcha'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+2024-11-26 01:23:36 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js: Error: Cannot find module '../../utils/captcha'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+2024-11-26 01:26:49 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js: Error: Cannot find module '../../utils/captcha'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+2024-11-26 02:34:50 [ERROR]: Uncaught exception: DiscordAPIError[10062]: Unknown interaction
+2024-11-26 03:31:19 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js: Error: Cannot find module './utils/captcha'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\commands\captcha.js
+- C:\Users\Asif Computer\Desktop\Discord\Discard_bot\src\index.js
+2024-11-26 03:31:42 [ERROR]: Unhandled promise rejection: Error [TokenInvalid]: An invalid token was provided.
+2024-11-26 03:37:18 [ERROR]: Uncaught exception: ReferenceError: Events is not defined
+2024-11-26 19:40:01 [ERROR]: Uncaught exception: ReferenceError: Events is not defined
+2024-11-26 19:43:08 [ERROR]: Uncaught exception: ReferenceError: Events is not defined
+2024-11-26 19:44:14 [ERROR]: Uncaught exception: ReferenceError: Events is not defined
+2024-11-26 19:44:59 [ERROR]: Uncaught exception: ReferenceError: Events is not defined
+2024-11-26 19:45:01 [ERROR]: Uncaught exception: ReferenceError: Events is not defined
+2024-11-26 19:50:58 [ERROR]: Uncaught exception: ReferenceError: Events is not defined
+2024-11-26 19:51:17 [ERROR]: Uncaught exception: ReferenceError: Events is not defined
+2024-11-26 19:51:28 [ERROR]: Uncaught exception: ReferenceError: Events is not defined
+2024-11-26 19:51:52 [ERROR]: Uncaught exception: ReferenceError: Events is not defined
+2024-11-26 21:01:08 [ERROR]: Uncaught exception: DiscordAPIError[40060]: Interaction has already been acknowledged.
+2024-11-27 01:26:38 [ERROR]: Failed to delete message: Unknown Message
+2024-11-27 01:27:45 [ERROR]: Failed to delete message: Unknown Message
+2024-11-27 01:28:10 [ERROR]: Failed to delete message: Unknown Message
+2024-11-27 01:28:11 [ERROR]: Uncaught exception: DiscordAPIError[50013]: Missing Permissions
+2024-11-27 01:28:59 [ERROR]: Failed to delete message: Unknown Message
+2024-11-27 01:32:59 [ERROR]: Failed to delete message: Unknown Message
+2024-11-27 01:35:31 [ERROR]: Failed to delete message: Unknown Message
+2024-11-27 01:42:44 [ERROR]: Uncaught exception: DiscordAPIError[50013]: Missing Permissions

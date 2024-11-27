@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
+const fs = require('fs');
 const { TwitterApi } = require('twitter-api-v2');
 require('dotenv').config();
 
@@ -12,6 +13,7 @@ const twitterClient = new TwitterApi({
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('tweet')
+        
         .setDescription('Post a meme to Twitter')
         .addStringOption(option =>
             option.setName('message')

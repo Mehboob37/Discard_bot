@@ -1,23 +1,24 @@
 {
   "welcomeChannel": "welcome",
   "welcomeMessage": "/meme",
-  "modLogsChannel": "mod-logs",
+  "modLogsChannel": "1309475707910488145",
   "rankUpdateChannel": "rank-updates",
   "prohibitedWords": [
     "badword1",
     "badword2",
-    "badword23",
+    "badword33",
     "kabeera",
     "hakim"
   ],
+  "warningLimit": 3,
   "phishingDomains": [
     "phishingsite.com",
     "malicious.com"
   ],
-  "verificationChannel": "1309349932247023717",
+  "verificationChannel": "1309373303110107190",
   "rulesChannel": "rules",
   "moderatorRole": "Moderator",
-  "verifiedRole": "1308612610538733568",
+  "verifiedRole": "1310906653746663445",
   "unverifiedRole": "Unverified",
   "rankRoles": {
     "Newbie": "Newbie",

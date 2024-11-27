@@ -1,4 +1,4 @@
-const fs = require('node:fs');
+const fs = require('node:fs'); 
 const path = require('node:path');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 require('dotenv').config();
@@ -15,7 +15,7 @@ const client = new Client({
 });
 
 // List of prohibited words and phishing domains
-const prohibitedWords = ["hakim","kabeera"];
+const prohibitedWords = [];
 const phishingDomains = []; 
 
 // Load Commands
@@ -61,14 +61,19 @@ client.on('messageCreate', async (message) => {
     // Check for prohibited words
     const foundWord = prohibitedWords.find(word => message.content.toLowerCase().includes(word.toLowerCase()));
     if (foundWord) {
+        console.log(`[DEBUG] Prohibited word detected: ${foundWord}`);
         try {
-            await message.delete();
+            console.log(`[DEBUG] Attempting to delete message: "${message.content}"`);
+            await message.delete(); // Ensure this is awaited properly
+            console.log(`[DEBUG] Message deleted successfully.`);
             await message.channel.send(`⚠️ ${message.author}, your message contained a prohibited word and was deleted.`);
             logger.info(`Deleted message containing prohibited word: ${foundWord}`);
         } catch (error) {
-            logger.error(`Failed to delete message: ${error}`);
+            console.error(`[ERROR] Failed to delete message: ${error.message}`);
+            logger.error(`Failed to delete message: ${error.message}`);
         }
     }
+
 
     // Check for phishing links/domains
     if (phishingDomains.some(domain => message.content.toLowerCase().includes(domain))) {
