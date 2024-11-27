@@ -8,8 +8,7 @@ const { isSpam, isPhishing } = require('../utils/moderationFilters');
 module.exports = {
     name: Events.MessageCreate,
     async execute(message, client) {
-        if (message.author.bot) return;
-        
+       
         const configPath = path.join(__dirname, '../../config/config.json');
         const config = JSON.parse(fs.readFileSync(configPath));
 
@@ -30,51 +29,72 @@ module.exports = {
         // Moderation
         const prohibitedWords = config.prohibitedWords || [];
         const phishingDomains = config.phishingDomains || [];
-
-        let hasProhibitedContent = true;
+        let hasProhibitedContent = false;
         let reason = '';
 
         // Check for prohibited words
-        if (prohibitedWords.some(word => message.content.toLowerCase().includes(word))) {
+        // Check for prohibited words
+        if (prohibitedWords.some(word => message.content.toLowerCase().includes(word.toLowerCase()))) {
+            console.log('Prohibited word detected');
             hasProhibitedContent = true;
             reason = 'Inappropriate language';
-        }
-       
-        // Check for phishing links
-        const urlRegex = /(https?:\/\/[^\s]+)/g;
-        const urls = message.content.match(urlRegex);
-        console.log('matched',urls)
-        if (urls) {
-            for (const url of urls) {
-                try {
-                    const domain = new URL(url).hostname;
-                    if (phishingDomains.includes(domain)) {
-                        hasProhibitedContent = true;
-                        reason = 'Phishing link detected';
-                        console.log('ok')
-                        console.log(hasProhibitedContent)
-                        break;
+            
+            async function deleteMessageWithRetry(message, retries = 3, delay = 1000) {
+                if (!message || typeof message.delete !== 'function') {
+                    throw new TypeError('Invalid message object passed to deleteMessageWithRetry');
+                }
+                for (let i = 0; i < retries; i++) {
+                    try {
+                        await message.delete();
+                        console.log('Message deleted successfully');
+                        return;
+                    } catch (error) {
+                        console.error(`Attempt ${i + 1} failed to delete message:`, error);
+                        if (i === retries - 1) {
+                            console.error('All retries failed. Message not deleted.');
+                            throw error;
+                        }
+                        await new Promise(resolve => setTimeout(resolve, delay)); // Wait before retrying
                     }
-                } catch (error) {
-                    continue;
                 }
             }
-        }
-        if (hasProhibitedContent) {
-            console.log('deleted')
-            await message.delete();
             
-
-            // Warn the user
-            const warning = await message.channel.send(`${message.author}, your message was removed due to ${reason}. Please adhere to the server rules.`);
-
-            // Log to mod-logs
-            const logChannel = message.guild.channels.cache.get(config.modLogsChannel) || message.guild.channels.cache.find(channel => channel.name === 'mod-logs');
-            if (logChannel) {
-                logChannel.send(`Deleted message from ${message.author.tag} for ${reason}. Content: "${message.content}"`);
-            }
-
-            // Optionally, implement warnings and bans here
+            
+            
         }
+
+       
+        // Check for phishing links
+        // const urlRegex = /(https?:\/\/[^\s]+)/g;
+        // const urls = message.content.match(urlRegex);
+        // console.log('matched',urls)
+        // if (urls) {
+        //     for (const url of urls) {
+        //         try {
+        //             const domain = new URL(url).hostname;
+        //             if (phishingDomains.includes(domain)) {
+        //                 hasProhibitedContent = true;
+        //                 reason = 'Phishing link detected';
+        //                 console.log('ok')
+        //                 console.log(hasProhibitedContent)
+        //                 break;
+        //             }
+        //         } catch (error) {
+        //             continue;
+        //         }
+        //     }
+        // }
+        // if (hasProhibitedContent) {
+        //     await message.delete();
+        //     const warning = await message.channel.send(`${message.author}, your message was removed due to ${reason}. Please adhere to the server rules.`);
+
+        //     // Log to mod-logs
+        //     const logChannel = message.guild.channels.cache.get(config.modLogsChannel) || message.guild.channels.cache.find(channel => channel.name === 'mod-logs');
+        //     if (logChannel) {
+        //         logChannel.send(`Deleted message from ${message.author.tag} for ${reason}. Content: "${message.content}"`);
+        //     }
+
+        //     // Optionally, implement warnings and bans here
+        // }
     },
 };

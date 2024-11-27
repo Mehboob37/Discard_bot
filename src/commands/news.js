@@ -8,7 +8,7 @@ module.exports = {
         .setDescription('Fetch the latest Solana crypto news'),
     async execute(interaction) {
         try {
-            const feed = await parser.parseURL('https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml'); // Example RSS feed
+            const feed = await parser.parseURL('https://decrypt.co/feed'); // Example RSS feed
 
             const solanaNews = feed.items.filter(item => item.title.toLowerCase().includes('solana'));
 

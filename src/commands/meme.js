@@ -48,6 +48,17 @@ module.exports = {
                         .setRequired(false))
         ),
     async execute(interaction) {
+        const allowedChannelIds = ['1308986018807943178', '1309349932247023717']; // Replace with your allowed channel IDs
+        const currentChannelId = interaction.channel.id;
+
+        // Restrict command usage to specific channels
+        if (!allowedChannelIds.includes(currentChannelId)) {
+            return interaction.reply({
+                content: 'This command can only be used in specific channels.',
+                ephemeral: true,
+            });
+        }
+
         const subcommand = interaction.options.getSubcommand();
 
         if (subcommand === 'list') {

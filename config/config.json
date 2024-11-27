@@ -1,8 +1,8 @@
 {
   "welcomeChannel": "welcome",
   "welcomeMessage": "Welcome {username}! Explore the #rules channel and claim your roles in #get-roles.",
-  "modLogsChannel": "mod-logs",
-  "rankUpdateChannel": "rank-updates",
+  "modLogsChannel": "1309361720107597915",
+  "rankUpdateChannel": "1310487710716264488",
   "prohibitedWords": [
     "badword1",
     "badword2",

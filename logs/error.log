@@ -5,3 +5,53 @@
 2024-11-22 11:16:45 [ERROR]: Uncaught exception: DiscordAPIError[10062]: Unknown interaction
 2024-11-22 11:39:54 [ERROR]: Uncaught exception: ReferenceError: cron is not defined
 2024-11-22 12:11:01 [ERROR]: Failed to login Discord Bot: Error: getaddrinfo EAI_AGAIN discord.com
+2024-11-25 11:28:50 [ERROR]: Uncaught exception: ReferenceError: CronJob is not defined
+2024-11-25 11:29:25 [ERROR]: Uncaught exception: ReferenceError: CronJob is not defined
+2024-11-25 11:29:43 [ERROR]: Uncaught exception: Error: ENOENT: no such file or directory, open '/home/mehboob/Upwork Projects/data/xp.json'
+2024-11-25 11:30:31 [ERROR]: Uncaught exception: ReferenceError: CronJob is not defined
+2024-11-25 11:31:13 [ERROR]: Uncaught exception: TypeError: CronJob is not a constructor
+2024-11-25 11:32:10 [ERROR]: Uncaught exception: TypeError: CronJob is not a constructor
+2024-11-25 11:41:00 [ERROR]: [ERROR] Failed to load command at /home/mehboob/Upwork Projects/Bots/src/commands/ranking.js: ReferenceError: data is not defined
+2024-11-25 11:41:29 [ERROR]: [ERROR] Failed to load command at /home/mehboob/Upwork Projects/Bots/src/commands/ranking.js: ReferenceError: data is not defined
+2024-11-25 11:43:09 [ERROR]: [ERROR] Failed to load command at /home/mehboob/Upwork Projects/Bots/src/commands/ranking.js: ReferenceError: data is not defined
+2024-11-25 11:43:30 [ERROR]: [ERROR] Failed to load command at /home/mehboob/Upwork Projects/Bots/src/commands/ranking.js: ReferenceError: data is not defined
+2024-11-25 11:43:37 [ERROR]: [ERROR] Failed to load command at /home/mehboob/Upwork Projects/Bots/src/commands/ranking.js: ReferenceError: data is not defined
+2024-11-25 11:43:41 [ERROR]: [ERROR] Failed to load command at /home/mehboob/Upwork Projects/Bots/src/commands/ranking.js: ReferenceError: data is not defined
+2024-11-25 11:45:25 [ERROR]: [ERROR] Failed to load command at /home/mehboob/Upwork Projects/Bots/src/commands/ranking.js: ReferenceError: data is not defined
+2024-11-26 07:06:02 [ERROR]: Failed to login Discord Bot: ConnectTimeoutError: Connect Timeout Error
+2024-11-26 07:34:41 [ERROR]: Failed to login Discord Bot: Error [TokenInvalid]: An invalid token was provided.
+2024-11-26 07:35:28 [ERROR]: Error reading config.json: Error: ENOENT: no such file or directory, open '/home/mehboob/Upwork Projects/Bots/src/config/config.json'
+2024-11-26 07:37:37 [ERROR]: Error reading config.json: Error: ENOENT: no such file or directory, open '/home/mehboob/Upwork Projects/Bots/src/config/config.json'
+2024-11-26 07:38:24 [ERROR]: Error reading config.json: Error: ENOENT: no such file or directory, open '/home/mehboob/Upwork Projects/Bots/src/config/config.json'
+2024-11-26 07:40:15 [ERROR]: Error reading config.json: Error: ENOENT: no such file or directory, open '/home/mehboob/Upwork Projects/Bots/src/config/config.json'
+2024-11-26 09:07:22 [ERROR]: Uncaught exception: ReferenceError: Cannot access 'reason' before initialization
+2024-11-26 09:26:34 [ERROR]: Uncaught exception: DiscordAPIError[10062]: Unknown interaction
+2024-11-26 09:50:05 [ERROR]: Uncaught exception: ReferenceError: scheduleNewsUpdates is not defined
+2024-11-26 10:23:03 [ERROR]: [ERROR] Failed to load command at /home/mehboob/Upwork Projects/Bots/src/commands/analytics.js: Error: Cannot find module 'technicalindicators'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/commands/analytics.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+2024-11-26 10:24:46 [ERROR]: [ERROR] Failed to load command at /home/mehboob/Upwork Projects/Bots/src/commands/analytics.js: Error: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/commands/analytics.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+2024-11-26 10:25:13 [ERROR]: [ERROR] Failed to load command at /home/mehboob/Upwork Projects/Bots/src/commands/analytics.js: Error: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/commands/analytics.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+2024-11-26 10:34:42 [ERROR]: [ERROR] Failed to load command at /home/mehboob/Upwork Projects/Bots/src/commands/analytics.js: Error: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/commands/analytics.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+2024-11-26 10:34:53 [ERROR]: [ERROR] Failed to load command at /home/mehboob/Upwork Projects/Bots/src/commands/analytics.js: Error: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/commands/analytics.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+2024-11-26 10:42:46 [ERROR]: Unhandled promise rejection: ReferenceError: CronJob is not defined
+2024-11-26 10:43:00 [ERROR]: Unhandled promise rejection: ReferenceError: CronJob is not defined
+2024-11-26 10:43:32 [ERROR]: Unhandled promise rejection: ReferenceError: CronJob is not defined
+2024-11-26 10:44:54 [ERROR]: Unhandled promise rejection: ReferenceError: CronJob is not defined
+2024-11-26 10:46:27 [ERROR]: Unhandled promise rejection: TypeError: CronJob is not a constructor
+2024-11-26 10:46:57 [ERROR]: Unhandled promise rejection: TypeError: CronJob is not a constructor
+2024-11-26 10:47:28 [ERROR]: Unhandled promise rejection: ReferenceError: CronJob is not defined
+2024-11-26 10:56:19 [ERROR]: Unhandled promise rejection: ReferenceError: startAutoPriceMonitoring is not defined

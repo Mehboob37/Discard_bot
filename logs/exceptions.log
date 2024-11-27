@@ -47,3 +47,392 @@ Require stack:
     at Module.load (node:internal/modules/cjs/loader:1288:32)
     at Module._load (node:internal/modules/cjs/loader:1104:12)
     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-11-25 11:28:50 [ERROR]: uncaughtException: CronJob is not defined
+ReferenceError: CronJob is not defined
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:101:13)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-25 11:29:25 [ERROR]: uncaughtException: CronJob is not defined
+ReferenceError: CronJob is not defined
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:103:13)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-25 11:29:43 [ERROR]: uncaughtException: ENOENT: no such file or directory, open '/home/mehboob/Upwork Projects/data/xp.json'
+Error: ENOENT: no such file or directory, open '/home/mehboob/Upwork Projects/data/xp.json'
+    at Object.writeFileSync (node:fs:2367:20)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:79:8)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-25 11:30:31 [ERROR]: uncaughtException: CronJob is not defined
+ReferenceError: CronJob is not defined
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:125:13)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-25 11:31:13 [ERROR]: uncaughtException: CronJob is not a constructor
+TypeError: CronJob is not a constructor
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:125:13)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-25 11:32:10 [ERROR]: uncaughtException: CronJob is not a constructor
+TypeError: CronJob is not a constructor
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:125:13)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
+2024-11-25 11:41:00 [ERROR]: uncaughtException: data is not defined
+ReferenceError: data is not defined
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/commands/ranking.js:61:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:74:38)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+2024-11-25 11:41:29 [ERROR]: uncaughtException: data is not defined
+ReferenceError: data is not defined
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/commands/ranking.js:61:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:77:38)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+2024-11-25 11:41:39 [ERROR]: uncaughtException: data is not defined
+ReferenceError: data is not defined
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/commands/ranking.js:61:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:10:38)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+2024-11-25 11:41:50 [ERROR]: uncaughtException: data is not defined
+ReferenceError: data is not defined
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/commands/ranking.js:61:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:10:38)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+2024-11-25 11:41:55 [ERROR]: uncaughtException: data is not defined
+ReferenceError: data is not defined
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/commands/ranking.js:61:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:10:38)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+2024-11-25 11:43:09 [ERROR]: uncaughtException: data is not defined
+ReferenceError: data is not defined
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/commands/ranking.js:61:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:75:38)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+2024-11-25 11:43:30 [ERROR]: uncaughtException: data is not defined
+ReferenceError: data is not defined
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/commands/ranking.js:61:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:75:38)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+2024-11-25 11:43:37 [ERROR]: uncaughtException: data is not defined
+ReferenceError: data is not defined
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/commands/ranking.js:61:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:75:38)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+2024-11-25 11:43:41 [ERROR]: uncaughtException: data is not defined
+ReferenceError: data is not defined
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/commands/ranking.js:61:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:75:38)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+2024-11-25 11:45:25 [ERROR]: uncaughtException: data is not defined
+ReferenceError: data is not defined
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/commands/ranking.js:61:7)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:75:38)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+2024-11-26 07:32:45 [ERROR]: uncaughtException: Cannot find module 'bottleneck'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/events/messageCreate.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+Error: Cannot find module 'bottleneck'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/events/messageCreate.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/events/messageCreate.js:8:20)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+2024-11-26 09:00:13 [ERROR]: uncaughtException: Unexpected identifier 'message'
+/home/mehboob/Upwork Projects/Bots/src/events/messageCreate.js:44
+               aw message.channel.send(reason)
+                  ^^^^^^^
+
+SyntaxError: Unexpected identifier 'message'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:48:19)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+2024-11-26 09:00:17 [ERROR]: uncaughtException: Unexpected identifier 'message'
+/home/mehboob/Upwork Projects/Bots/src/events/messageCreate.js:44
+               aw message.channel.send(reason)
+                  ^^^^^^^
+
+SyntaxError: Unexpected identifier 'message'
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:48:19)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+2024-11-26 09:07:22 [ERROR]: uncaughtException: Cannot access 'reason' before initialization
+ReferenceError: Cannot access 'reason' before initialization
+    at Object.execute (/home/mehboob/Upwork Projects/Bots/src/events/messageCreate.js:12:90)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-11-26 09:26:34 [ERROR]: uncaughtException: Unknown interaction
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/mehboob/Upwork Projects/Bots/node_modules/@discordjs/rest/dist/index.js:727:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/mehboob/Upwork Projects/Bots/node_modules/@discordjs/rest/dist/index.js:831:23)
+    at async _REST.request (/home/mehboob/Upwork Projects/Bots/node_modules/@discordjs/rest/dist/index.js:1272:22)
+    at async ChatInputCommandInteraction.reply (/home/mehboob/Upwork Projects/Bots/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:115:5)
+    at async Object.execute (/home/mehboob/Upwork Projects/Bots/src/events/interactionCreate.js:25:13)
+2024-11-26 09:50:05 [ERROR]: uncaughtException: scheduleNewsUpdates is not defined
+ReferenceError: scheduleNewsUpdates is not defined
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/scheduledTasks/scheduleNewsUpdates.js:46:18)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:68:29)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+2024-11-26 10:43:22 [ERROR]: uncaughtException: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+Error: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:7:21)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-11-26 10:45:04 [ERROR]: uncaughtException: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+Error: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/index.js:9:21)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+2024-11-26 10:57:37 [ERROR]: uncaughtException: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+Error: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js:3:21)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+2024-11-26 11:04:14 [ERROR]: uncaughtException: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+Error: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js:3:21)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+2024-11-26 11:04:28 [ERROR]: uncaughtException: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+Error: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js:3:21)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+2024-11-26 11:04:47 [ERROR]: uncaughtException: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+Error: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js:3:21)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+2024-11-26 11:05:12 [ERROR]: uncaughtException: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+Error: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js:3:21)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+2024-11-26 11:05:14 [ERROR]: uncaughtException: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+Error: Cannot find module 'cron'
+Require stack:
+- /home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js
+- /home/mehboob/Upwork Projects/Bots/src/index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Module._load (node:internal/modules/cjs/loader:1051:27)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/mehboob/Upwork Projects/Bots/src/events/analyticsEvent.js:3:21)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)

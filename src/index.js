@@ -6,6 +6,7 @@ require('dotenv').config();
 const logger = require('./utils/logger'); 
 const cron = require('node-cron');
 const axios = require('axios');
+const { sendLeaderboardToChannel } = require('./scheduledTasks/rankingScheduale.js');
 
 const client = new Client({ 
     intents: [ 
@@ -63,59 +64,87 @@ process.on('uncaughtException', error => {
 });
 const newTokenNotifier = require('./scheduledTasks/newTokenNotifier');
 
-
+// let targetChannelId = '1310487710716264488'
 client.on('messageCreate', async (message) => {
     console.log(`Message received from ${message.author.tag}: ${message.content}`);
-    // newTokenNotifier(client);
+    
+   
+    newTokenNotifier(client);
+});
+cron.schedule('* * * * *', () => {
+    console.log('going')
+    sendLeaderboardToChannel(client, targetChannelId);
+});
+// cron.schedule('* * * * *', () => {
+//     console.log('going')
+//     fetchAndPostNews(client)
+    
+// });
+const tokenMapping = {
+    SOLUSD: 'solana',
+    BTCUSD: 'bitcoin',
+    ETHUSD: 'ethereum',
+    // Add more tokens as needed
+};
+
+const alertThresholds = {
+    SOLUSD: 257.43, // Alert if SOL price exceeds $25
+    BTCUSD: 30000, // Alert if BTC price exceeds $30,000
+    ETHUSD: 1800, // Alert if ETH price exceeds $1,800
+};
+
+const targetChannelId = '1309349932247023717'; // Replace with your Discord channel ID
+
+function startAutoPriceMonitoring(client) {
+    cron.schedule('* * * * *', async () => { // Runs every minute
+        console.log('Checking token prices...');
+        for (const [ticker, tokenId] of Object.entries(tokenMapping)) {
+            try {
+                // Fetch token price from CoinGecko API
+                const priceApiUrl = `https://api.coingecko.com/api/v3/simple/price?ids=${tokenId}&vs_currencies=usd`;
+                const priceResponse = await fetch(priceApiUrl);
+
+                if (!priceResponse.ok) {
+                    throw new Error(`Failed to fetch price data for ${ticker} with status: ${priceResponse.status}`);
+                }
+
+                const priceData = await priceResponse.json();
+                const tokenPrice = priceData[tokenId]?.usd;
+
+                if (!tokenPrice) {
+                    console.error(`Price data not available for ${ticker}`);
+                    continue;
+                }
+
+                console.log(`[${ticker}] Current Price: $${tokenPrice}`);
+
+                // Check if the token price exceeds the threshold
+                if (tokenPrice >= alertThresholds[ticker]) {
+                    console.log(`[ALERT] ${ticker} price has crossed the threshold! Current price: $${tokenPrice}`);
+                    
+                    // Send alert to specific Discord channel
+                    const channel = await client.channels.fetch(targetChannelId);
+                    if (channel) {
+                        await channel.send(`[ALERT] ${ticker} price has crossed your threshold! Current price: $${tokenPrice}`);
+                    } else {
+                        console.error('Channel not found.');
+                    }
+                }
+            } catch (error) {
+                console.error(`Error fetching price for ${ticker}:`, error.message);
+            }
+        }
+    });
+}
+client.once('ready', () => {
+    console.log('Bot is logged in and ready!');
+    startAutoPriceMonitoring(client); // Start the cron job
 });
 
 // Initialize Express Server
 const expressApp = require('./server/app.js');
-
-// cron.schedule('* * * * *', async () => {
-//     const alertsPath = path.join(__dirname, '../data/alerts.json');
-//     let alerts = JSON.parse(fs.readFileSync(alertsPath));
-//     console.log('ok')
-
-//     for (const userId in alerts) {
-//         for (const alert of alerts[userId]) {
-//             try {
-//                 // Fetch current data
-//                 const response = await axios.get(`https://api.coingecko.com/api/v3/coins/${alert.token}`);
-//                 const data = response.data;
-
-//                 if (!data || !data.market_data) continue;
-
-//                 let currentValue;
-//                 if (alert.type === 'price') {
-//                     currentValue = data.market_data.current_price.usd;
-//                 } else if (alert.type === 'volume') {
-//                     currentValue = data.market_data.total_volume.usd;
-//                 }
-
-//                 if (!currentValue) continue;
-
-//                 // Check if threshold is crossed
-//                 if (currentValue >= alert.threshold) {
-//                     const user = await client.users.fetch(userId);
-//                     await user.send(`🔔 **Alert Triggered!**\n**${alert.token.toUpperCase()}** ${alert.type} has crossed **${alert.threshold}**.\nCurrent ${alert.type}: ${currentValue}`);
-
-//                     // Optionally, remove the alert after triggering
-//                     alerts[userId] = alerts[userId].filter(a => !(a.token === alert.token && a.type === alert.type && a.threshold === alert.threshold));
-//                     if (alerts[userId].length === 0) {
-//                         delete alerts[userId];
-//                     }
-//                 }
-//             } catch (error) {
-//                 console.error('Error checking alerts:', error);
-//             }
-//         }
-//     }
-
-//     fs.writeFileSync(alertsPath, JSON.stringify(alerts, null, 2));
-// });
-
-// Login to Discord
+const fetchAndPostNews = require('./scheduledTasks/scheduleNewsUpdates.js');
+ 
 client.login("MTMwODYxMzUwNzgzODc3NTM0Nw.GJ7siF.Cyg6QnazCd3pNkrLJeGiuV-YEl6_MGqmTPOzM0")
     .then(() => logger.info('Discord Bot is online!'))
     .catch(error => logger.error(`Failed to login Discord Bot: ${error}`));
