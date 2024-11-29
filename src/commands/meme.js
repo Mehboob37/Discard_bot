@@ -1,8 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
-const fs = require('fs');
-const path = require('path');
-const Canvas = require('canvas');
-const { profanityFilter } = require('../utils/profanityFilter');
+const fetch = require('node-fetch');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -16,27 +13,10 @@ module.exports = {
         .addSubcommand(subcommand =>
             subcommand
                 .setName('create')
-                .setDescription('Create a custom meme')
+                .setDescription('Create a meme from a template')
                 .addStringOption(option =>
                     option.setName('template')
-                        .setDescription('Name of the meme template')
-                        .setRequired(true))
-                .addStringOption(option =>
-                    option.setName('top_text')
-                        .setDescription('Top text for the meme')
-                        .setRequired(false))
-                .addStringOption(option =>
-                    option.setName('bottom_text')
-                        .setDescription('Bottom text for the meme')
-                        .setRequired(false))
-        )
-        .addSubcommand(subcommand =>
-            subcommand
-                .setName('upload')
-                .setDescription('Upload a custom image to create a meme')
-                .addAttachmentOption(option =>
-                    option.setName('image')
-                        .setDescription('Image to use for the meme')
+                        .setDescription('Meme template ID')
                         .setRequired(true))
                 .addStringOption(option =>
                     option.setName('top_text')
@@ -48,133 +28,84 @@ module.exports = {
                         .setRequired(false))
         ),
     async execute(interaction) {
-        const allowedChannelIds = ['1308986018807943178', '1309349932247023717']; // Replace with your allowed channel IDs
-        const currentChannelId = interaction.channel.id;
-
-        // Restrict command usage to specific channels
-        if (!allowedChannelIds.includes(currentChannelId)) {
-            return interaction.reply({
-                content: 'This command can only be used in specific channels.',
-                ephemeral: true,
-            });
-        }
-
         const subcommand = interaction.options.getSubcommand();
+          // Restrict command to a specific channel (e.g., #meme-channel)
+          const allowedChannelId = '1309373303110107190'; // Replace with the channel ID where memes can be created
+          if (interaction.channelId !== allowedChannelId) {
+              return interaction.reply({ content: 'This command can only be used in the #meme-channel.', ephemeral: true });
+          }
 
         if (subcommand === 'list') {
-            const templatesDir = path.join(__dirname, '../../memes/templates');
-            const templates = fs.readdirSync(templatesDir)
-                .filter(file => file.endsWith('.png') || file.endsWith('.jpg') || file.endsWith('.jpeg'))
-                .map(file => file.replace(/\.(png|jpg|jpeg)$/, ''));
-
-            if (templates.length === 0) {
-                return interaction.reply('No meme templates available.');
-            }
-
-            const templateList = templates.map(template => `• ${template}`).join('\n');
-
-            await interaction.reply({
-                content: `**Available Meme Templates:**\n${templateList}`,
-                ephemeral: true
-            });
-        } else if (subcommand === 'create' || subcommand === 'upload') {
-            // Defer the reply to allow more time for processing
-            await interaction.deferReply({ ephemeral: false });
-
-            let templatePath;
-            let imageBuffer;
-
+            // Fetch meme templates from Imgflip
             try {
-                if (subcommand === 'create') {
-                    const templateName = interaction.options.getString('template').toLowerCase().replace(/\s+/g, '_');
-                    const topText = interaction.options.getString('top_text') || '';
-                    const bottomText = interaction.options.getString('bottom_text') || '';
+                const response = await fetch('https://api.imgflip.com/get_memes');
+                const data = await response.json();
+                // Debug log for API response
+                console.log('API response:', data)
 
-                    // Profanity Filter
-                    if (profanityFilter(topText) || profanityFilter(bottomText)) {
-                        return interaction.editReply({ content: 'Inappropriate language detected!', ephemeral: true });
-                    }
-
-                    templatePath = path.join(__dirname, '../../memes/templates', `${templateName}.png`);
-                    if (!fs.existsSync(templatePath)) {
-                        return interaction.editReply({ content: 'Template not found.', ephemeral: true });
-                    }
-
-                    const canvas = Canvas.createCanvas(500, 500);
-                    const ctx = canvas.getContext('2d');
-
-                    const image = await Canvas.loadImage(templatePath);
-                    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-
-                    ctx.font = '30px Impact';
-                    ctx.fillStyle = 'white';
-                    ctx.strokeStyle = 'black';
-                    ctx.textAlign = 'center';
-
-                    // Top Text
-                    if (topText) {
-                        ctx.textBaseline = 'top';
-                        ctx.strokeText(topText.toUpperCase(), canvas.width / 2, 10);
-                        ctx.fillText(topText.toUpperCase(), canvas.width / 2, 10);
-                    }
-
-                    // Bottom Text
-                    if (bottomText) {
-                        ctx.textBaseline = 'bottom';
-                        ctx.strokeText(bottomText.toUpperCase(), canvas.width / 2, canvas.height - 10);
-                        ctx.fillText(bottomText.toUpperCase(), canvas.width / 2, canvas.height - 10);
-                    }
-
-                    imageBuffer = canvas.toBuffer('image/png');
-                } else if (subcommand === 'upload') {
-                    const image = interaction.options.getAttachment('image');
-                    const topText = interaction.options.getString('top_text') || '';
-                    const bottomText = interaction.options.getString('bottom_text') || '';
-
-                    // Profanity Filter
-                    if (profanityFilter(topText) || profanityFilter(bottomText)) {
-                        return interaction.editReply({ content: 'Inappropriate language detected!', ephemeral: true });
-                    }
-
-                    const canvas = Canvas.createCanvas(500, 500);
-                    const ctx = canvas.getContext('2d');
-
-                    const loadedImage = await Canvas.loadImage(image.url);
-                    ctx.drawImage(loadedImage, 0, 0, canvas.width, canvas.height);
-
-                    ctx.font = '30px Impact';
-                    ctx.fillStyle = 'white';
-                    ctx.strokeStyle = 'black';
-                    ctx.textAlign = 'center';
-
-                    // Top Text
-                    if (topText) {
-                        ctx.textBaseline = 'top';
-                        ctx.strokeText(topText.toUpperCase(), canvas.width / 2, 10);
-                        ctx.fillText(topText.toUpperCase(), canvas.width / 2, 10);
-                    }
-
-                    // Bottom Text
-                    if (bottomText) {
-                        ctx.textBaseline = 'bottom';
-                        ctx.strokeText(bottomText.toUpperCase(), canvas.width / 2, canvas.height - 10);
-                        ctx.fillText(bottomText.toUpperCase(), canvas.width / 2, canvas.height - 10);
-                    }
-
-                    // Optional Watermark
-                    const serverName = interaction.guild.name;
-                    ctx.font = '15px Arial';
-                    ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-                    ctx.textAlign = 'right';
-                    ctx.fillText(`Powered by ${serverName}`, canvas.width - 10, canvas.height - 10);
-
-                    imageBuffer = canvas.toBuffer('image/png');
+                if (!data.success) {
+                    console.log('Error in API response:', data.error_message);
+                    return interaction.reply({ content: 'Failed to fetch memes.', ephemeral: true });
                 }
 
-                await interaction.editReply({ files: [{ attachment: imageBuffer, name: 'meme.png' }] });
+                const memes = data.data.memes.slice(0, 50); // Limit to 50 memes
+                const pages = [];
+                let pageContent = '';
+
+                memes.forEach((meme, index) => {
+                    const line = `**${index + 1}.** ${meme.name} - \`${meme.id}\`\n`;
+                    if ((pageContent + line).length > 1900) {
+                        pages.push(pageContent);
+                        pageContent = '';
+                    }
+                    pageContent += line;
+                });
+                pages.push(pageContent); // Add the last page
+
+                await interaction.reply({ content: `**Available Meme Templates:**\n${pages[0]}`, ephemeral: true });
+
+                // Handle pagination if there are multiple pages
+                if (pages.length > 1) {
+                    for (let i = 1; i < pages.length; i++) {
+                        await interaction.followUp({ content: pages[i], ephemeral: true });
+                    }
+                }
+            } catch (error) {
+                console.error(`Error fetching meme list: ${error}`);
+                await interaction.reply({ content: 'Failed to fetch meme list.', ephemeral: true });
+            }
+        } else if (subcommand === 'create') {
+            // Create a meme using Imgflip API
+            const templateId = interaction.options.getString('template');
+            const topText = interaction.options.getString('top_text') || '';
+            const bottomText = interaction.options.getString('bottom_text') || '';
+
+            const username = 'ghulamkabira622@gmail.com'; // Replace with Imgflip username
+            const password = 'v6EJn94UyUK@9w7'; // Replace with Imgflip password
+
+            try {
+                const response = await fetch('https://api.imgflip.com/caption_image', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        template_id: templateId,
+                        username,
+                        password,
+                        text0: topText,
+                        text1: bottomText,
+                    }),
+                });
+                const data = await response.json();
+
+                if (!data.success) {
+                    return interaction.reply({ content: 'Failed to create meme. Ensure the template ID is correct.', ephemeral: true });
+                }
+
+                const memeUrl = data.data.url;
+                await interaction.reply({ content: `Here is your meme: ${memeUrl}` });
             } catch (error) {
                 console.error(`Error creating meme: ${error}`);
-                await interaction.editReply({ content: 'Failed to create meme.', ephemeral: true });
+                await interaction.reply({ content: 'Failed to create meme.', ephemeral: true });
             }
         } else {
             await interaction.reply({ content: 'Unknown subcommand.', ephemeral: true });

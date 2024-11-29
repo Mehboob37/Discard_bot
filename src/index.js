@@ -93,7 +93,7 @@ const alertThresholds = {
     ETHUSD: 1800, // Alert if ETH price exceeds $1,800
 };
 
-const targetChannelId = '1309349932247023717'; // Replace with your Discord channel ID
+const targetChannelId = '1309475707910488145'; // Replace with your Discord channel ID
 
 function startAutoPriceMonitoring(client) {
     cron.schedule('* * * * *', async () => { // Runs every minute
@@ -145,6 +145,6 @@ client.once('ready', () => {
 const expressApp = require('./server/app.js');
 const fetchAndPostNews = require('./scheduledTasks/scheduleNewsUpdates.js');
  
-client.login("MTMwODYxMzUwNzgzODc3NTM0Nw.GJ7siF.Cyg6QnazCd3pNkrLJeGiuV-YEl6_MGqmTPOzM0")
+client.login("MTMwODc4Njk1MDY4MTAwNjE5MQ.GHVO6r.LwGoRQfVjUD_vK_kGnCi5zxUdcmRBnXKgFYQT4")
     .then(() => logger.info('Discord Bot is online!'))
     .catch(error => logger.error(`Failed to login Discord Bot: ${error}`));

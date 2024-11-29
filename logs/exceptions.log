@@ -436,3 +436,76 @@ Require stack:
     at Module.load (node:internal/modules/cjs/loader:1288:32)
     at Module._load (node:internal/modules/cjs/loader:1104:12)
     at Module.require (node:internal/modules/cjs/loader:1311:19)
+2024-11-26 20:25:52 [ERROR]: uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at Server.listen (node:net:2063:7)
+    at Function.listen (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\node_modules\express\lib\application.js:635:24)
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\server\app.js:37:5)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+2024-11-26 20:31:32 [ERROR]: uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at Server.listen (node:net:2063:7)
+    at Function.listen (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\node_modules\express\lib\application.js:635:24)
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\server\app.js:37:5)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+2024-11-26 20:32:48 [ERROR]: uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at Server.listen (node:net:2063:7)
+    at Function.listen (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\node_modules\express\lib\application.js:635:24)
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\server\app.js:37:5)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+2024-11-26 20:34:42 [ERROR]: uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+    at listenInCluster (node:net:1961:12)
+    at Server.listen (node:net:2063:7)
+    at Function.listen (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\node_modules\express\lib\application.js:635:24)
+    at Object.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\server\app.js:37:5)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+2024-11-26 20:43:18 [ERROR]: uncaughtException: Unknown interaction
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\node_modules\@discordjs\rest\dist\index.js:727:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\node_modules\@discordjs\rest\dist\index.js:831:23)
+    at async _REST.request (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\node_modules\@discordjs\rest\dist\index.js:1272:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:115:5)
+    at async Object.execute (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\events\interactionCreate.js:25:13)
+2024-11-28 23:14:01 [ERROR]: uncaughtException: Expected double-quoted property name in JSON at position 875
+SyntaxError: Expected double-quoted property name in JSON at position 875
+    at JSON.parse (<anonymous>)
+    at Object.execute (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\events\messageCreate.js:13:29)
+    at Client.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\index.js:51:50)
+    at Client.emit (node:events:531:35)
+    at MessageCreateAction.handle (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\node_modules\discord.js\src\client\actions\MessageCreate.js:32:14)
+    at module.exports [as MESSAGE_CREATE] (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\node_modules\discord.js\src\client\websocket\handlers\MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\node_modules\discord.js\src\client\websocket\WebSocketManager.js:348:31)
+    at WebSocketManager.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\node_modules\discord.js\src\client\websocket\WebSocketManager.js:232:12)
+    at WebSocketManager.emit (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\node_modules\@vladfrangu\async_event_emitter\dist\index.cjs:287:31)
+    at WebSocketShard.<anonymous> (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\node_modules\@discordjs\ws\dist\index.js:1190:51)
+2024-11-29 02:19:27 [ERROR]: uncaughtException: The reply to this interaction has already been sent or deferred.
+Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ChatInputCommandInteraction.reply (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:105:46)
+    at Object.execute (C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\events\interactionCreate.js:25:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

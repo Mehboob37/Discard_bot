@@ -55,3 +55,46 @@ Require stack:
 2024-11-26 10:46:57 [ERROR]: Unhandled promise rejection: TypeError: CronJob is not a constructor
 2024-11-26 10:47:28 [ERROR]: Unhandled promise rejection: ReferenceError: CronJob is not defined
 2024-11-26 10:56:19 [ERROR]: Unhandled promise rejection: ReferenceError: startAutoPriceMonitoring is not defined
+2024-11-26 20:25:52 [ERROR]: Uncaught exception: Error: listen EADDRINUSE: address already in use :::3000
+2024-11-26 20:31:32 [ERROR]: Uncaught exception: Error: listen EADDRINUSE: address already in use :::3000
+2024-11-26 20:32:48 [ERROR]: Uncaught exception: Error: listen EADDRINUSE: address already in use :::3000
+2024-11-26 20:34:42 [ERROR]: Uncaught exception: Error: listen EADDRINUSE: address already in use :::3000
+2024-11-26 20:41:01 [ERROR]: Unhandled promise rejection: DiscordAPIError[50001]: Missing Access
+2024-11-26 20:42:01 [ERROR]: Unhandled promise rejection: DiscordAPIError[50001]: Missing Access
+2024-11-26 20:43:01 [ERROR]: Unhandled promise rejection: DiscordAPIError[50001]: Missing Access
+2024-11-26 20:43:18 [ERROR]: Uncaught exception: DiscordAPIError[10062]: Unknown interaction
+2024-11-28 22:20:11 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js: Error: Cannot find module '../../config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js
+- C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\index.js
+2024-11-28 22:20:25 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js: Error: Cannot find module '../config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js
+- C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\index.js
+2024-11-28 22:20:57 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js: Error: Cannot find module '../config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js
+- C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\index.js
+2024-11-28 22:21:02 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js: Error: Cannot find module '../config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js
+- C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\index.js
+2024-11-28 22:22:03 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js: Error: Cannot find module '../config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js
+- C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\index.js
+2024-11-28 22:22:40 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js: Error: Cannot find module '../../config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js
+- C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\index.js
+2024-11-28 22:23:03 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js: Error: Cannot find module '../../config.json'
+Require stack:
+- C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js
+- C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\index.js
+2024-11-28 23:10:20 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js: SyntaxError: Unexpected token 'else'
+2024-11-28 23:11:02 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js: SyntaxError: Unexpected token 'else'
+2024-11-28 23:14:01 [ERROR]: Uncaught exception: SyntaxError: Expected double-quoted property name in JSON at position 875
+2024-11-29 01:44:48 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js: SyntaxError: Unexpected token '}'
+2024-11-29 01:45:02 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js: SyntaxError: Unexpected token '}'
+2024-11-29 01:45:12 [ERROR]: [ERROR] Failed to load command at C:\Users\Asif Computer\Desktop\Discord\meh\Discard_bot\src\commands\meme.js: SyntaxError: Unexpected token '='
+2024-11-29 02:19:27 [ERROR]: Uncaught exception: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
