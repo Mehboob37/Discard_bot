@@ -36,7 +36,7 @@ module.exports = {
           }
 
         if (subcommand === 'list') {
-            // Fetch meme templates from Imgflip
+           
             try {
                 const response = await fetch('https://api.imgflip.com/get_memes');
                 const data = await response.json();

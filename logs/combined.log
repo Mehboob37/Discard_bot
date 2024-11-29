@@ -14593,3 +14593,83 @@ Require stack:
 2024-11-29 02:55:02 [INFO]: Loaded command: whalealert
 2024-11-29 02:55:02 [INFO]: Express server is running on port 3000
 2024-11-29 02:55:05 [INFO]: Discord Bot is online!
+2024-11-29 02:56:02 [INFO]: Loaded command: chart
+2024-11-29 02:56:02 [INFO]: Loaded command: captcha
+2024-11-29 02:56:02 [INFO]: Loaded command: community
+2024-11-29 02:56:02 [INFO]: Loaded command: price
+2024-11-29 02:56:02 [INFO]: Loaded command: newtoken
+2024-11-29 02:56:02 [INFO]: Loaded command: listalerts
+2024-11-29 02:56:02 [INFO]: Loaded command: sentiment
+2024-11-29 02:56:02 [INFO]: Loaded command: meme
+2024-11-29 02:56:02 [INFO]: Loaded command: moderation
+2024-11-29 02:56:02 [INFO]: Loaded command: news
+2024-11-29 02:56:02 [INFO]: Loaded command: newtokens
+2024-11-29 02:56:02 [INFO]: Loaded command: pricecheck
+2024-11-29 02:56:02 [INFO]: Loaded command: ranking
+2024-11-29 02:56:02 [INFO]: Loaded command: removealert
+2024-11-29 02:56:02 [INFO]: Loaded command: setalert
+2024-11-29 02:56:02 [INFO]: Loaded command: toptokens
+2024-11-29 02:56:02 [INFO]: Loaded command: wallet
+2024-11-29 02:56:02 [INFO]: Loaded command: whalealert
+2024-11-29 02:56:03 [INFO]: Express server is running on port 3000
+2024-11-29 02:56:05 [INFO]: Discord Bot is online!
+2024-11-29 02:57:02 [INFO]: Loaded command: chart
+2024-11-29 02:57:02 [INFO]: Loaded command: captcha
+2024-11-29 02:57:02 [INFO]: Loaded command: community
+2024-11-29 02:57:02 [INFO]: Loaded command: price
+2024-11-29 02:57:02 [INFO]: Loaded command: newtoken
+2024-11-29 02:57:02 [INFO]: Loaded command: listalerts
+2024-11-29 02:57:02 [INFO]: Loaded command: sentiment
+2024-11-29 02:57:02 [INFO]: Loaded command: meme
+2024-11-29 02:57:02 [INFO]: Loaded command: moderation
+2024-11-29 02:57:03 [INFO]: Loaded command: news
+2024-11-29 02:57:03 [INFO]: Loaded command: newtokens
+2024-11-29 02:57:03 [INFO]: Loaded command: pricecheck
+2024-11-29 02:57:03 [INFO]: Loaded command: ranking
+2024-11-29 02:57:03 [INFO]: Loaded command: removealert
+2024-11-29 02:57:03 [INFO]: Loaded command: setalert
+2024-11-29 02:57:03 [INFO]: Loaded command: toptokens
+2024-11-29 02:57:03 [INFO]: Loaded command: wallet
+2024-11-29 02:57:03 [INFO]: Loaded command: whalealert
+2024-11-29 02:57:03 [INFO]: Express server is running on port 3000
+2024-11-29 02:57:05 [INFO]: Discord Bot is online!
+2024-11-29 02:57:36 [INFO]: Loaded command: chart
+2024-11-29 02:57:36 [INFO]: Loaded command: captcha
+2024-11-29 02:57:36 [INFO]: Loaded command: community
+2024-11-29 02:57:36 [INFO]: Loaded command: price
+2024-11-29 02:57:36 [INFO]: Loaded command: newtoken
+2024-11-29 02:57:36 [INFO]: Loaded command: listalerts
+2024-11-29 02:57:36 [INFO]: Loaded command: sentiment
+2024-11-29 02:57:36 [INFO]: Loaded command: meme
+2024-11-29 02:57:36 [INFO]: Loaded command: moderation
+2024-11-29 02:57:36 [INFO]: Loaded command: news
+2024-11-29 02:57:36 [INFO]: Loaded command: newtokens
+2024-11-29 02:57:36 [INFO]: Loaded command: pricecheck
+2024-11-29 02:57:36 [INFO]: Loaded command: ranking
+2024-11-29 02:57:36 [INFO]: Loaded command: removealert
+2024-11-29 02:57:36 [INFO]: Loaded command: setalert
+2024-11-29 02:57:36 [INFO]: Loaded command: toptokens
+2024-11-29 02:57:36 [INFO]: Loaded command: wallet
+2024-11-29 02:57:36 [INFO]: Loaded command: whalealert
+2024-11-29 02:57:36 [INFO]: Express server is running on port 3000
+2024-11-29 02:57:39 [INFO]: Discord Bot is online!
+2024-11-29 02:58:02 [INFO]: Loaded command: chart
+2024-11-29 02:58:02 [INFO]: Loaded command: captcha
+2024-11-29 02:58:02 [INFO]: Loaded command: community
+2024-11-29 02:58:02 [INFO]: Loaded command: price
+2024-11-29 02:58:02 [INFO]: Loaded command: newtoken
+2024-11-29 02:58:02 [INFO]: Loaded command: listalerts
+2024-11-29 02:58:02 [INFO]: Loaded command: sentiment
+2024-11-29 02:58:02 [INFO]: Loaded command: meme
+2024-11-29 02:58:02 [INFO]: Loaded command: moderation
+2024-11-29 02:58:02 [INFO]: Loaded command: news
+2024-11-29 02:58:02 [INFO]: Loaded command: newtokens
+2024-11-29 02:58:02 [INFO]: Loaded command: pricecheck
+2024-11-29 02:58:02 [INFO]: Loaded command: ranking
+2024-11-29 02:58:02 [INFO]: Loaded command: removealert
+2024-11-29 02:58:02 [INFO]: Loaded command: setalert
+2024-11-29 02:58:02 [INFO]: Loaded command: toptokens
+2024-11-29 02:58:02 [INFO]: Loaded command: wallet
+2024-11-29 02:58:02 [INFO]: Loaded command: whalealert
+2024-11-29 02:58:03 [INFO]: Express server is running on port 3000
+2024-11-29 02:58:05 [INFO]: Discord Bot is online!
