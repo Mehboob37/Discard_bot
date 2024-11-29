@@ -64,22 +64,164 @@ process.on('uncaughtException', error => {
 });
 const newTokenNotifier = require('./scheduledTasks/newTokenNotifier');
 
-// let targetChannelId = '1310487710716264488'
+let targetChannelId = '1310487710716264488'
 client.on('messageCreate', async (message) => {
     console.log(`Message received from ${message.author.tag}: ${message.content}`);
     
    
-    newTokenNotifier(client);
+    // newTokenNotifier(client);
 });
-cron.schedule('* * * * *', () => {
-    console.log('going')
-    sendLeaderboardToChannel(client, targetChannelId);
-});
+// cron.schedule('* * * * *', () => {
+//     console.log('going')
+//     sendLeaderboardToChannel(client, targetChannelId);
+// });
 // cron.schedule('* * * * *', () => {
 //     console.log('going')
 //     fetchAndPostNews(client)
     
 // });
+// const HELIUS_API_KEY = '99e277e3-7a26-4452-bfa1-2c57c722091a'; 
+// const ALERT_CHANNEL_ID = '1309349932247023717'; // Replace with your Discord channel ID
+// const WHALE_THRESHOLD = 10000; // Define the whale transaction threshold in SOL
+
+// client.once('ready', () => {
+//     console.log(`Logged in as ${client.user.tag}!`);
+//     startWhaleAlertJob();
+// });
+
+// /**
+//  * Start a scheduled job to check for whale transactions.
+//  */
+// function startWhaleAlertJob() {
+//     setInterval(async () => {
+//         console.log('Checking for whale transactions...');
+//         const transactions = await fetchRecentTransactions();
+//         console.log(transactions)
+//         if (transactions.length > 0) {
+//             const channel = await client.channels.fetch(ALERT_CHANNEL_ID);
+
+//             if (channel instanceof TextChannel) {
+//                 for (const tx of transactions) {
+//                     if (tx.amount > WHALE_THRESHOLD) {
+//                         await sendWhaleAlert(channel, tx);
+//                     }
+//                 }
+//             } else {
+//                 console.error('Alert channel is not a text channel.');
+//             }
+//         } else {
+//             console.log('No whale transactions detected.');
+//         }
+//     }, 60000); // Runs every 60 seconds
+// }
+
+// /**
+//  * Fetch recent Solana transactions from the latest blocks.
+//  */
+// async function fetchRecentTransactions() {
+//     const url = `https://api.helius.dev/v0/addresses/transactions?api-key=${HELIUS_API_KEY}`;
+
+//     try {
+//         const response = await fetch(url);
+
+//         if (response.ok) {
+//             const data = await response.json();
+
+//             // Extract relevant transaction details
+//             return data
+//                 .map((tx) => parseTransaction(tx))
+//                 .filter((tx) => tx); // Remove invalid transactions
+//         } else {
+//             console.error(`Failed to fetch transactions: ${response.status}`);
+//             return [];
+//         }
+//     } catch (error) {
+//         console.error('Error fetching transactions:', error.message);
+//         return [];
+//     }
+// }
+
+// /**
+//  * Parse transaction details to extract relevant information.
+//  */
+// function parseTransaction(transaction) {
+//     try {
+//         const amount = transaction.amount / 1e9; // Convert lamports to SOL
+
+//         // Only include meaningful transactions (non-zero amounts)
+//         if (amount <= 0) return null;
+
+//         const from = transaction.source;
+//         const to = transaction.destination;
+//         const signature = transaction.signature;
+
+//         return { amount, from, to, signature };
+//     } catch (error) {
+//         console.error('Error parsing transaction:', error.message);
+//         return null;
+//     }
+// }
+
+// /**
+//  * Send a whale alert to the specified Discord channel.
+//  */
+// async function sendWhaleAlert(channel, transaction) {
+//     const { amount, from, to, signature } = transaction;
+
+//     const alertMessage = `🐋 **Whale Alert!** Transaction > ${WHALE_THRESHOLD} SOL detected:\n` +
+//         `**From:** ${from || 'Unknown'}\n` +
+//         `**To:** ${to || 'Unknown'}\n` +
+//         `**Amount:** ${amount.toFixed(2)} SOL\n` +
+//         `[View Transaction Details](https://solscan.io/tx/${signature})`;
+
+//     try {
+//         await channel.send(alertMessage);
+//         console.log('Whale alert sent successfully.');
+//     } catch (error) {
+//         console.error('Error sending whale alert:', error.message);
+//     }
+// }
+const twitterClient = new TwitterApi(process.env.TWITTER_BEARER_TOKEN);
+const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+
+client.once('ready', () => {
+    console.log('Twitter Monitor Bot is online!');
+    monitorTweets();
+});
+
+async function monitorTweets() {
+    try {
+        const stream = await twitterClient.v2.searchStream({
+            'tweet.fields': ['author_id'],
+            expansions: ['author_id'],
+            'user.fields': ['username'],
+        });
+
+        stream.autoReconnect = true;
+
+        stream.on(ETwitterStreamEvent.Data, async tweet => {
+            const solanaKeywords = ['solana defi', 'solana nft', 'solana partnerships'];
+            if (solanaKeywords.some(keyword => tweet.data.text.toLowerCase().includes(keyword))) {
+                const guild = client.guilds.cache.get(process.env.GUILD_ID);
+                if (!guild) return;
+
+                const channel = guild.channels.cache.find(ch => ch.name === 'solana-tweets');
+                if (channel) {
+                    const userId = tweet.data.author_id;
+                    const user = await twitterClient.v2.user(userId);
+                    channel.send(`**New Tweet from ${user.data.username}:**\n${tweet.data.text}\nhttps://twitter.com/${user.data.username}/status/${tweet.data.id}`);
+                }
+            }
+        });
+
+        stream.on(ETwitterStreamEvent.Error, error => {
+            console.error('Twitter Stream Error:', error);
+        });
+    } catch (error) {
+        console.error('Failed to set up Twitter stream:', error);
+    }
+}
+
 const tokenMapping = {
     SOLUSD: 'solana',
     BTCUSD: 'bitcoin',
@@ -93,7 +235,7 @@ const alertThresholds = {
     ETHUSD: 1800, // Alert if ETH price exceeds $1,800
 };
 
-const targetChannelId = '1309349932247023717'; // Replace with your Discord channel ID
+// const targetChannelId = '1309349932247023717'; // Replace with your Discord channel ID
 
 function startAutoPriceMonitoring(client) {
     cron.schedule('* * * * *', async () => { // Runs every minute
@@ -136,10 +278,10 @@ function startAutoPriceMonitoring(client) {
         }
     });
 }
-client.once('ready', () => {
-    console.log('Bot is logged in and ready!');
-    startAutoPriceMonitoring(client); // Start the cron job
-});
+// client.once('ready', () => {
+//     console.log('Bot is logged in and ready!');
+//     startAutoPriceMonitoring(client); // Start the cron job
+// });
 
 // Initialize Express Server
 const expressApp = require('./server/app.js');

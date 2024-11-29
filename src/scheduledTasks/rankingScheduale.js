@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { EmbedBuilder } = require('discord.js');
 
 const xpDataPath = path.join(__dirname, '../../data/xp.json');
 
@@ -32,18 +33,42 @@ async function sendLeaderboardToChannel(client, channelId) {
     const sortedUsers = Object.entries(data).sort((a, b) => b[1].xp - a[1].xp).slice(0, 10);
 
     if (sortedUsers.length === 0) {
-        return console.log('No data available for the leaderboard.');
+        console.log('No data available for the leaderboard.');
+        return;
     }
 
-    let leaderboard = '**XP Leaderboard:**\n';
-    sortedUsers.forEach(([userId, userData], index) => {
-        const user = client.users.cache.get(userId)?.username || 'Unknown User';
-        leaderboard += `${index + 1}. ${user} - ${userData.xp} XP (${userData.rank})\n`;
-    });
+    const leaderboardEmbed = new EmbedBuilder()
+        .setColor('#FFD700')
+        .setTitle('🏆 XP Leaderboard')
+        .setDescription('Here are the top 10 users with the highest XP!')
+        .setFooter({ text: 'Keep chatting to climb the ranks!' })
+        .setTimestamp();
+
+    for (const [index, [userId, userData]] of sortedUsers.entries()) {
+        try {
+            // Fetch user directly from Discord API
+            const user = await client.users.fetch(userId);
+            const username = user?.username || 'Unknown User';
+            const rankIcon = userData.rank === 'Newbie' ? '🌱' : userData.rank === 'Explorer' ? '🚀' : '🐳';
+
+            leaderboardEmbed.addFields({
+                name: `${index + 1}. ${username}`,
+                value: `${rankIcon} **XP:** ${userData.xp} | **Rank:** ${userData.rank}`,
+                inline: false,
+            });
+        } catch (error) {
+            console.error(`Error fetching user with ID ${userId}:`, error.message);
+            leaderboardEmbed.addFields({
+                name: `${index + 1}. Unknown User`,
+                value: `🚫 **XP:** ${userData.xp} | **Rank:** ${userData.rank}`,
+                inline: false,
+            });
+        }
+    }
 
     const channel = await client.channels.fetch(channelId);
     if (channel) {
-        channel.send(leaderboard);
+        channel.send({ embeds: [leaderboardEmbed] });
     } else {
         console.error('Channel not found.');
     }

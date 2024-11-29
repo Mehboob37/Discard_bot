@@ -1,35 +1,30 @@
 const { SlashCommandBuilder } = require('discord.js');
 
+const guildMemberAdd = require('../events/guildMemberAdd');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('community')
         .setDescription('Community engagement commands')
-        .addSubcommand(subcommand =>
-            subcommand
-                .setName('setwelcome')
-                .setDescription('Set a custom welcome message')
-                .addStringOption(option =>
-                    option.setName('message')
-                        .setDescription('Welcome message with [username]')
-                        .setRequired(true))
+        .addUserOption(option =>
+            option
+                .setName('member')
+                .setDescription('The member to simulate joining.')
+                .setRequired(true)
         ),
-    async execute(interaction) {
-        const subcommand = interaction.options.getSubcommand();
-
-        if (subcommand === 'setwelcome') {
-            const message = interaction.options.getString('message');
-
-            // Save the welcome message to config or database
-            // For simplicity, using config.json
-
-            const config = require('../../config/config.json');
-            config.welcomeMessage = message;
-            const fs = require('fs');
-            fs.writeFileSync('./config/config.json', JSON.stringify(config, null, 2));
-
-            await interaction.reply({ content: 'Welcome message updated successfully!', ephemeral: true });
-        } else {
-            await interaction.reply({ content: 'Unknown subcommand.', ephemeral: true });
-        }
-    },
+        async execute(interaction) {
+            const member = interaction.options.getMember('member');
+    
+            if (!member) {
+                return interaction.reply({ content: 'Member not found.', ephemeral: true });
+            }
+    
+            // Simulate the GuildMemberAdd event
+            try {
+                await guildMemberAdd.execute(member);
+                interaction.reply({ content: `Simulated new member join for ${member.user.tag}.`, ephemeral: true });
+            } catch (error) {
+                console.error('Error simulating member join:', error);
+                interaction.reply({ content: 'An error occurred while simulating the event.', ephemeral: true });
+            }
+        },
 };

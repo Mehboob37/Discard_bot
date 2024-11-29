@@ -25,7 +25,7 @@ module.exports = {
             const verifiedRole = interaction.options.getRole('verified_role');
 
             // Save the verification settings to config or database
-            const config = require('../../config/config.json');
+            const config = require('../config/config.json');
             config.verificationChannel = channel.id;
             config.verifiedRole = verifiedRole.id;
             const fs = require('fs');

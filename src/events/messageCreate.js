@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { Events } = require('discord.js');
+const { Events, EmbedBuilder } = require('discord.js');
 const { addXP, getRank, updateRank } = require('../utils/xpSystem');
 const { checkProfanity } = require('../utils/profanityFilter');
 const { isSpam, isPhishing } = require('../utils/moderationFilters');
@@ -8,7 +8,9 @@ const { isSpam, isPhishing } = require('../utils/moderationFilters');
 module.exports = {
     name: Events.MessageCreate,
     async execute(message, client) {
-       
+        if (message.author.bot) return;
+        console.log(message.content)
+
         const configPath = path.join(__dirname, '../../config/config.json');
         const config = JSON.parse(fs.readFileSync(configPath));
 
@@ -22,79 +24,71 @@ module.exports = {
         if (newRank !== oldRank) {
             const rankChannel = message.guild.channels.cache.get(config.rankUpdateChannel) || message.guild.channels.cache.find(channel => channel.name === 'rank-updates');
             if (rankChannel) {
-                rankChannel.send(`${message.author.username} has reached the rank of **${newRank}**!`);
+                const rankEmbed = new EmbedBuilder()
+                    .setColor('#00FF00')
+                    .setTitle('🎉 Rank Up!')
+                    .setDescription(`**${message.author.username}** has reached the rank of **${newRank}**! Keep it up!`)
+                    .setTimestamp();
+
+                rankChannel.send({ embeds: [rankEmbed] });
             }
         }
 
         // Moderation
         const prohibitedWords = config.prohibitedWords || [];
         const phishingDomains = config.phishingDomains || [];
+
         let hasProhibitedContent = false;
         let reason = '';
 
         // Check for prohibited words
-        // Check for prohibited words
-        if (prohibitedWords.some(word => message.content.toLowerCase().includes(word.toLowerCase()))) {
-            console.log('Prohibited word detected');
+        if (prohibitedWords.some(word => message.content.toLowerCase().includes(word))) {
             hasProhibitedContent = true;
-            reason = 'Inappropriate language';
-            
-            async function deleteMessageWithRetry(message, retries = 3, delay = 1000) {
-                if (!message || typeof message.delete !== 'function') {
-                    throw new TypeError('Invalid message object passed to deleteMessageWithRetry');
-                }
-                for (let i = 0; i < retries; i++) {
-                    try {
-                        await message.delete();
-                        console.log('Message deleted successfully');
-                        return;
-                    } catch (error) {
-                        console.error(`Attempt ${i + 1} failed to delete message:`, error);
-                        if (i === retries - 1) {
-                            console.error('All retries failed. Message not deleted.');
-                            throw error;
-                        }
-                        await new Promise(resolve => setTimeout(resolve, delay)); // Wait before retrying
-                    }
-                }
-            }
-            
-            
-            
+            reason = '🚫 Inappropriate language';
         }
 
-       
         // Check for phishing links
-        // const urlRegex = /(https?:\/\/[^\s]+)/g;
-        // const urls = message.content.match(urlRegex);
-        // console.log('matched',urls)
-        // if (urls) {
-        //     for (const url of urls) {
-        //         try {
-        //             const domain = new URL(url).hostname;
-        //             if (phishingDomains.includes(domain)) {
-        //                 hasProhibitedContent = true;
-        //                 reason = 'Phishing link detected';
-        //                 console.log('ok')
-        //                 console.log(hasProhibitedContent)
-        //                 break;
-        //             }
-        //         } catch (error) {
-        //             continue;
-        //         }
-        //     }
-        // }
-        // if (hasProhibitedContent) {
-        //     await message.delete();
-        //     const warning = await message.channel.send(`${message.author}, your message was removed due to ${reason}. Please adhere to the server rules.`);
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        const urls = message.content.match(urlRegex);
 
-        //     // Log to mod-logs
-        //     const logChannel = message.guild.channels.cache.get(config.modLogsChannel) || message.guild.channels.cache.find(channel => channel.name === 'mod-logs');
-        //     if (logChannel) {
-        //         logChannel.send(`Deleted message from ${message.author.tag} for ${reason}. Content: "${message.content}"`);
-        //     }
+        if (urls) {
+            for (const url of urls) {
+                try {
+                    const domain = new URL(url).hostname;
+                    if (phishingDomains.includes(domain)) {
+                        hasProhibitedContent = true;
+                        reason = '🛑 Phishing link detected';
+                        break;
+                    }
+                } catch (error) {
+                    continue;
+                }
+            }
+        }
 
-        //     // Optionally, implement warnings and bans here
-        // }
+        if (hasProhibitedContent) {
+            await message.delete();
+
+            // Warn the user
+            const warningEmbed = new EmbedBuilder()
+                .setColor('#FF0000')
+                .setTitle('⚠️ Warning')
+                .setDescription(`${message.author}, your message was removed due to ${reason}. Please adhere to the server rules.`)
+                .setTimestamp();
+
+            await message.channel.send({ embeds: [warningEmbed] });
+
+            // Log to mod-logs
+            const logChannel = message.guild.channels.cache.get(config.modLogsChannel) || message.guild.channels.cache.find(channel => channel.name === 'mod-logs');
+            if (logChannel) {
+                const logEmbed = new EmbedBuilder()
+                    .setColor('#FFA500')
+                    .setTitle('📝 Moderation Log')
+                    .setDescription(`**Action:** Deleted Message\n**User:** ${message.author.tag}\n**Reason:** ${reason}\n**Content:** "${message.content}"`)
+                    .setTimestamp();
+
+                logChannel.send({ embeds: [logEmbed] });
+            }
+        }
     },
 };

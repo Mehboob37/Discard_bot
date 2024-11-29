@@ -12,15 +12,18 @@ async function fetchAndPostNews(client) {
     try {
         const feed = await parser.parseURL('https://decrypt.co/feed'); // Example RSS feed
         const solanaNews = feed.items.filter(item => item.title.toLowerCase().includes('solana'));
-
+        // console.log(solanaNews)
         if (solanaNews.length === 0) return;
 
         const latestNews = solanaNews[0];
         const lastNews = fs.existsSync(lastNewsPath) ? JSON.parse(fs.readFileSync(lastNewsPath)) : null;
-
-        if (lastNews?.title === latestNews.title)
+        console.log(latestNews)
+        if (lastNews?.title === latestNews.title){
             console.log('no new news')
-            return; // Skip if no new news
+            return
+        }
+
+           
 
         const newsChannel = client.channels.cache.get(newsChannelId);
         if (!newsChannel) {
