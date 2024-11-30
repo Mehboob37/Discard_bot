@@ -29,22 +29,20 @@ module.exports = {
         ),
     async execute(interaction) {
         const subcommand = interaction.options.getSubcommand();
-          // Restrict command to a specific channel (e.g., #meme-channel)
-          const allowedChannelId = '1309373303110107190'; // Replace with the channel ID where memes can be created
-          if (interaction.channelId !== allowedChannelId) {
-              return interaction.reply({ content: 'This command can only be used in the #meme-channel.', ephemeral: true });
-          }
+
+        // Restrict command to a specific channel (e.g., #meme-channel)
+        const allowedChannelId = '1309475707910488145'; // Replace with the channel ID where memes can be created
+        if (interaction.channelId !== allowedChannelId) {
+            return interaction.reply({ content: 'This command can only be used in the #meme-channel.', ephemeral: true });
+        }
 
         if (subcommand === 'list') {
-           
+            // Fetch meme templates from Imgflip
             try {
                 const response = await fetch('https://api.imgflip.com/get_memes');
                 const data = await response.json();
-                // Debug log for API response
-                console.log('API response:', data)
 
                 if (!data.success) {
-                    console.log('Error in API response:', data.error_message);
                     return interaction.reply({ content: 'Failed to fetch memes.', ephemeral: true });
                 }
 
@@ -53,16 +51,19 @@ module.exports = {
                 let pageContent = '';
 
                 memes.forEach((meme, index) => {
-                    const line = `**${index + 1}.** ${meme.name} - \`${meme.id}\`\n`;
-                    if ((pageContent + line).length > 1900) {
+                    // Format the meme details (name, ID, and meme link)
+                    const memeLine = `**Template Name:** ${meme.name}\n**Template ID:** ${meme.id}\n![Meme Image](${meme.url})\nUse the template ID to create a meme!\n\n`;
+
+                    // If the page content length exceeds the Discord message character limit, push the current page and reset the page content
+                    if ((pageContent + memeLine).length > 1900) {
                         pages.push(pageContent);
                         pageContent = '';
                     }
-                    pageContent += line;
+                    pageContent += memeLine;
                 });
                 pages.push(pageContent); // Add the last page
 
-                await interaction.reply({ content: `**Available Meme Templates:**\n${pages[0]}`, ephemeral: true });
+                await interaction.reply({ content: pages[0], ephemeral: true });
 
                 // Handle pagination if there are multiple pages
                 if (pages.length > 1) {
